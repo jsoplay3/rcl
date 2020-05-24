@@ -11,7 +11,8 @@
     </head>
     <body>
         <?php
-            require('menu/menu.php')
+          require_once('../controller/EmpresaControlador.php');
+          require('menu/menu.php');
         ?>
         <div class="container">
 
@@ -38,7 +39,42 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <?php
+      $empresa = new EmpresaControlador();
+      $emp = $empresa->consultarEmpresa();
+      foreach ($emp as $key) {
+        echo "<tr>
+        <td>".$key['NAME_COMPANY']."</td>
+        <td>".$key['NAME_COMPANY']."</td>
+        <td>".$key['CEL_COMPANY']."</td>
+        <td>".$key['MAIL_COMPANY']."</td>
+        <td class='alignRight'>
+            <form action='adminCompany.php' method='post'>
+            
+            <input type='hidden' name='deleteId' value='".$key['ID']."'/>
+            <input type='submit' name='delete' value='eliminarEmp'/>
+
+
+            <!--<button type='button' class='btn btn-default'>
+                <span class='glyphicon glyphicon-trash'></span>
+            </button>-->
+            <button type='button' class='btn btn-default'>
+                <span class='glyphicon glyphicon-pencil'></span>
+            </button>
+            </form>
+        </td>
+        </tr>
+        ";
+
+        $company = new EmpresaControlador();
+        if(isset($_POST['delete'])  == "eliminarEmp"){
+          //Llamar a la funcion de cambiar estado a 0
+          // $company->inactivaEmpresa($_POST);
+          echo "hola";
+        }
+      }
+      ?>
+      <!-- <tr>
         <td>Exito</td>
         <td>Alimentos</td>
         <td>3005006832</td>
@@ -69,7 +105,7 @@
             </button>
             </form>
         </td>
-      </tr>
+      </tr> -->
       
     </tbody>
   </table>

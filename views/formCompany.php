@@ -10,6 +10,7 @@
     </head>
     <body>
         <?php
+            require_once('../controller/EmpresaControlador.php');
             require('menu/menu.php')
         ?>
         <div class="container">
@@ -20,7 +21,7 @@
               Registro de Empresas
             </div>
             <div class="panel-body">
-              <form action="../controller/companyController.php" method="post" role="form" enctype="multipart/form-data">
+              <form action="formCompany.php" method="post" role="form" enctype="multipart/form-data">
                 
                 <div class="row">
             
@@ -161,6 +162,13 @@
             
                 <input type="submit" value="Registrar Empresa" class="btn btn-success btn-block"/>
             </form>
+
+            <?php
+            if(isset($_POST)){
+              $company = new EmpresaControlador();
+              $company->validarEmpresa($_POST);
+            }
+            ?>
             </div>
           </div>
         </div>
