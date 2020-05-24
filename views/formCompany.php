@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>tbl_empresas</title>
+        <title>Registro de Empresas</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -136,7 +136,13 @@
                       <label for="category_company">Sector Económico</label>
                       <select class="form-control" name="category_company" requires>
                           <option></option>
-                          <option value="Sin Categoria">Sin Categoria</option>
+                          <option value="1">Alimentos preparados para consumo inmediato</option>
+                          <option value="2">Productos para el cuidado personal</option>
+                          <option value="3">Productos de limpieza</option>
+                          <option value="4">Productos para el Hogar</option>
+                          <option value="5">Tecnología</option>
+                          <option value="6">Producto artesanales</option>
+                          <option value="7">Productos de entretenimiento y cultura</option>
                       </select>
                   </div>
                 </div>
