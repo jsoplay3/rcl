@@ -38,7 +38,7 @@
             </div>
             <div class="col-md-4">
               <div class="form-group">
-                  <label for="category_company">Empresa:</label>
+                  <label for="category_company">Sector:</label>
                   <select class="form-control" name="category_company" requires>
                       <option value="0"></option>
                       <option value="1">Alimentos preparados para consumo inmediato</option>
