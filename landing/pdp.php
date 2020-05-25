@@ -1,3 +1,10 @@
+<?php
+  if($_POST['idCompany'] == ""){
+		echo "<meta http-equiv='Refresh' content='0;url=index.php'>";
+	} else {
+	}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +18,12 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+
+<?php
+      $empresa = new EmpresaControlador();
+      $emp = $empresa->consultarEmpresaPorId($_POST['idCompany']);
+      foreach ($emp as $key) {
+      echo '
   <?php
     require_once('../controller/EmpresaControlador.php');
   ?>
@@ -53,11 +66,7 @@
 
       <!--   Icon Section   -->
       <div class="row">
-      <?php
-      $empresa = new EmpresaControlador();
-      $emp = $empresa->consultarEmpresaPorId($idSolcitado);
-      foreach ($emp as $key) {
-      echo '
+      
         <div class="col s12 m4">
           <div class="card ">
             <div class="card-image waves-effect waves-block waves-light">
@@ -80,9 +89,7 @@
             </div>
           </div>
         </div>
-        ';
-      }
-      ?>
+      
         
       </div>
 

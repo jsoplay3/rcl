@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  	
+  <link  rel="icon"   href="images/IcoRcl.png" type="image/png" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Parallax Template - Materialize</title>
+  <title>Rionegro Compra Local</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/myStyle.css" type="text/css" rel="stylesheet">
 </head>
+
+<style>
+  
+</style>
+
 <body>
   <?php
     require_once('../controller/EmpresaControlador.php');
   ?>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Rionegro Compra Local</a>
+      <a id="logo-container" href="#" class="brand-logo">
+        <img src="../landing/images/logoRcl.svg" height="60px"/>
+      </a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Inicio</a></li>
         <li><a href="../views/login.php">Registrar Empresa</a></li>
@@ -28,23 +38,23 @@
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-
+  
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Rionegro Compra Local</h1>
+        <h1 class="tittleBanner">Rionegro Compra Local</h1>
         <div class="row center">
-          <h5 class="header col s12 light">Registra tu negocio en nuestro sistema para aumentar tus ventas a </h5>
+          <h5 class="header col s12 light descriptionBanner" >Registra tu negocio en nuestro sistema para aumentar tus ventas</h5>
         </div>
         <div class="row center">
-          <a href="../views/login.php" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Registrar Empresa</a>
+          <a href="../views/login.php" id="download-button" class="btn-large waves-effect waves-light  lighten-1 btnBanner">Registrar Empresa</a>
         </div>
         <br><br>
 
       </div>
     </div>
-    <div class="parallax"><img src="images/banner_rionegro1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="images/market.jpeg" alt="Unsplashed background img 1"></div>
   </div>
 
 
@@ -68,16 +78,27 @@
               <p><span>Página Web: </span><a href="'.$key['WEB_URL'].'" target="_blank">'.$key['WEB_URL'].'</a></p>
             </div>
             <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">'.$key['NAME_COMPANY'].'<i class="material-icons right">close</i></span>
-              <p>'.$key['DESCRIPTION_COMPANY'].'</p>
-              <span class="card-title grey-text text-darken-4">Productos</span>
-              <p>'.$key['PRODUCT_DESCRIPTION'].'</p>
+              <span class="card-title grey-text text-darken-4 ">'.$key['NAME_COMPANY'].'<i class="material-icons right">close</i></span>
+              <p class="descriptionCompany">'.$key['DESCRIPTION_COMPANY'].'</p>
+              <span class="titleProducts">Productos</span>
+              <p class="descriptionProducts">'.$key['PRODUCT_DESCRIPTION'].'</p>
+              <div class="containerButton">
+                <form action="pdp.php" method="post">
+                  <input type="hidden" value="'.$key['ID'].'" name="idCompany"/>
+                  <input type="submit" class="btn styleText btnSeeMore" value="Ver toda la información">
+                </form>
+              </div>
+              
             </div>
             <div class="card-action">
-              <a href="'.$key['FB_URL'].'" target="_blank">Facebook</a>
-              <a href="'.$key['INS_URL'].'" target="_blank">Instagram</a>
-              <a href="'.$key['YT_URL'].'" target="_blank">Youtube</a>
-            </div>
+              <div class="redesContainer">
+              <span>Nuestras Redes:</span>
+              <a href="'.$key['FB_URL'].'" target="_blank" alt="Visita nuestro FaceBook"><img src="images/facebook.svg" height="20px"/></a>
+              <a href="'.$key['INS_URL'].'" target="_blank" alt="Visita nuestro Instagram"><img src="images/instagram.svg" height="20px"/></a>
+              <a href="'.$key['YT_URL'].'" target="_blank" alt="Visita nuestro canal en Youtube"><img src="images/youtube.svg" height="20px"/></a>
+              <a href="https://api.whatsapp.com/send?phone=+57'.$key['CEL_COMPANY'].'" target="_blank" alt="Visita nuestro Whatsap"><img src="images/whatsapp.svg" height="20px"/></a>
+              </div>
+              </div>
           </div>
         </div>
         ';

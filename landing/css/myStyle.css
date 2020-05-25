@@ -1,0 +1,89 @@
+
+
+.containerButton{
+    width: 100%;;
+    text-align: center;
+    
+}
+
+.styleText{
+    text-transform: initial;
+}
+
+
+
+.descriptionCompany{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.1;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    display: block;
+    margin-block-start: 0.3em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+
+.titleProducts{
+    font-size: 20px;
+    color: red;
+}
+
+
+.descriptionProducts{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.1;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    margin-block-start: 0.3em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+
+.redesContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.redesContainer span{
+    margin-top: -8px;
+}
+
+.tittleBanner{
+    text-shadow: 2px 2px 0 #fff;
+    color: #D03D23;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.descriptionBanner{
+    text-shadow: 2px 2px 0 #000
+}
+
+.btnBanner{
+    background-color: #1E416B;
+    color: #fff;
+    border-radius: 0.5em;
+}
+
+.btnBanner:hover{
+    background-color: #E0B61D;
+    color: #1E416B;
+
+}
+.btnSeeMore{
+    color: #fff;
+    background-color: #1E416B;
+}
+
+.btnSeeMore:hover{
+    background-color: #E0B61D;
+    color:#1E416B;
+
+}
