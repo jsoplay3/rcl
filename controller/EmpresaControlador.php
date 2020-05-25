@@ -95,6 +95,13 @@ class EmpresaControlador{
     return $rows;
   }
 
+  public function consultarEmpresaPorIdOnly($id){
+    $this->empModel->set("id", $id);
+    $datos = $this->empModel->consultarEmpresaPorId();
+    $row = $datos->fetch_array();
+    return $row;
+  }
+
   public function actualizarEmpresa($data){
     $this->empModel->set("direccion", $data['address_company']);
     $this->empModel->set("telefono", $data['phone_company']);

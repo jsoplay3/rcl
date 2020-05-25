@@ -17,7 +17,8 @@
             require('menu/menu.php');
             $company = new EmpresaControlador();
             if(isset($_GET['id'])){
-              $data = $company->consultarEmpresaPorId($_GET['id']);
+              $data = $company->consultarEmpresaPorIdOnly($_GET['id']);
+              print_r($data);
             }
         ?>
         <div class="container">
@@ -36,7 +37,7 @@
                         <div class="form-group">
                             <label for="nit">Nit:</label>
                         <input class="form-control" type="text" name="nit" placeholder="000000000-1" 
-                        value="<?php echo $data['NIT']; ?>" required/>
+                        value="<?php echo isset($data['NIT'])?$data['NIT']:''; ?>" required/>
                         </div>
                     </div>
                 
@@ -44,14 +45,16 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="name_company">Nombre:</label>
-                            <input class="form-control" type="text" name="name_company" placeholder="Nombre de la empresa" required/>
+                            <input class="form-control" type="text" name="name_company" placeholder="Nombre de la empresa"
+                            value="<?php echo isset($data['NAME_COMPANY'])?$data['NAME_COMPANY']:''; ?>" required/>
                         </div>
                     </div>
             
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="address_company">Dirección:</label>
-                            <input class="form-control" type="text" name="address_company" placeholder="Dirección de la empresa"/>
+                            <input class="form-control" type="text" name="address_company" placeholder="Dirección de la empresa"
+                            value="<?php echo isset($data['NAME_COMPANY'])?$data['NAME_COMPANY']:''; ?>"/>
                         </div>
                     </div>
                 </div>
@@ -61,21 +64,24 @@
                   <div class="col-md-4">
                     <div class="form-group">
                         <label for="phone_company">Teléfono:</label>
-                        <input class="form-control" type="tel" name="phone_company" placeholder="555-55-55"/>
+                        <input class="form-control" type="tel" name="phone_company" placeholder="555-55-55"
+                        value="<?php echo isset($data['NAME_COMPANY'])?$data['NAME_COMPANY']:''; ?>"/>
                     </div>
                   </div>
             
                   <div class="col-md-4">
                     <div class="form-group">
                         <label for="cel_company">Celular:</label>
-                        <input class="form-control" type="tel" name="cel_company" placeholder="333-333-33-33" required/>
+                        <input class="form-control" type="tel" name="cel_company" placeholder="333-333-33-33" required
+                        value="<?php echo isset($data['NAME_COMPANY'])?$data['NAME_COMPANY']:''; ?>"/>
                     </div>
                   </div>
             
                   <div class="col-md-4">
                     <div class="form-group">
                         <label for="mail_company">Correo electrónico:</label>
-                        <input class="form-control" type="email" name="mail_company" placeholder="empresa@empresa.com" required/>
+                        <input class="form-control" type="email" name="mail_company" placeholder="empresa@empresa.com"
+                        value="<?php echo isset($data['NAME_COMPANY'])?$data['NAME_COMPANY']:''; ?>" required/>
                     </div>
                   </div>
                 </div>
@@ -85,7 +91,8 @@
                   <div class="col-md-4">
                     <div class="form-group">
                         <label for="contact_company">Contacto Encargado:</label>
-                        <input class="form-control" type="text" name="contact_company" placeholder="Nombre del propietario"/>
+                        <input class="form-control" type="text" name="contact_company" placeholder="Nombre del propietario"
+                        value="<?php echo isset($data['NAME_COMPANY'])?$data['NAME_COMPANY']:''; ?>"/>
                     </div>
                   </div>
             
@@ -100,7 +107,8 @@
                   <div class="col-md-4">
                     <div class="form-group">
                         <label for="web_url">Sitio Web:</label>
-                        <input class="form-control" type="url" name="web_url" placeholder="Nombre del propietario"/>
+                        <input class="form-control" type="url" name="web_url" placeholder="Nombre del propietario"
+                        value="<?php echo isset($data['NAME_COMPANY'])?$data['NAME_COMPANY']:''; ?>"/>
                     </div>
                   </div>
                 </div>
@@ -110,21 +118,24 @@
                   <div class="col-md-4">
                     <div class="form-group">
                         <label for="fb_url">FaceBook:</label>
-                        <input class="form-control" type="url" name="fb_url" placeholder="Nombre del propietario"/>
+                        <input class="form-control" type="url" name="fb_url" placeholder="Nombre del propietario"
+                        value="<?php echo isset($data['NAME_COMPANY'])?$data['NAME_COMPANY']:''; ?>"/>
                     </div>
                   </div>
             
                   <div class="col-md-4">
                     <div class="form-group">
                         <label for="tw_url">Twitter:</label>
-                        <input class="form-control" type="url" name="tw_url" placeholder="Nombre del propietario"/>
+                        <input class="form-control" type="url" name="tw_url" placeholder="Nombre del propietario"
+                        value="<?php echo isset($data['NAME_COMPANY'])?$data['NAME_COMPANY']:''; ?>"/>
                     </div>
                   </div>
 
                   <div class="col-md-4">
                       <div class="form-group">
                           <label for="ins_url">Instagram:</label>
-                          <input class="form-control" type="url" name="ins_url" placeholder="Nombre del propietario"/>
+                          <input class="form-control" type="url" name="ins_url" placeholder="Nombre del propietario"
+                          value="<?php echo isset($data['NAME_COMPANY'])?$data['NAME_COMPANY']:''; ?>"/>
                       </div>
                   </div>
 
@@ -137,7 +148,8 @@
                   <div class="col-md-4">
                       <div class="form-group">
                           <label for="yt_url">Youtube:</label>
-                          <input class="form-control" type="url" name="yt_url" placeholder="Nombre del propietario"/>
+                          <input class="form-control" type="url" name="yt_url" placeholder="Nombre del propietario"
+                          value="<?php echo isset($data['NAME_COMPANY'])?$data['NAME_COMPANY']:''; ?>"/>
                       </div>
                   </div>
             
@@ -159,7 +171,8 @@
                 <div class="form-group">
                   <div class="form-group">
                     <label for="description_company">Descripción del la compañia:</label>
-                    <textarea class="form-control" rows="5" name="description_company" required></textarea>
+                    <textarea class="form-control" rows="5" name="description_company"required>
+                    <?php echo isset($data['NAME_COMPANY'])?$data['NAME_COMPANY']:''; ?></textarea>
                 </div>
                 </div>
             
