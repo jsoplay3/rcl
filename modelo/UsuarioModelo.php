@@ -25,8 +25,9 @@ class UsuarioModelo {
     }
   
     public function insertarUsuario(){
-      $sql = "INSERT INTO users(ID, DOCUMENT, NAME, MAIL, PASS, STATE, TYPE, DATE_CREATED) 
-      VALUES ('$this->document','$this->name','$this->mail', '$this->pass','$this->state','$this->type',NOW())";
+      $sql = "INSERT INTO users(DOCUMENT, NAME, MAIL, PASS, DATE_CREATED) 
+      VALUES ('$this->document','$this->name','$this->mail', '$this->pass', NOW())";
+      echo $sql;
       $this->con->consultaSimple($sql, 0);
     }
   

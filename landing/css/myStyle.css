@@ -85,5 +85,69 @@
 .btnSeeMore:hover{
     background-color: #E0B61D;
     color:#1E416B;
+}
+.itemInfoCompany{
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+}
 
+.pdpPanelInfoCompany{
+    border: 1px solid #1E416B;
+    border-radius: 0.5em;
+    padding: 0em 1em;
+}
+
+.pdpTitleRedes{
+    text-align: center;
+    margin-bottom: 0.7em;
+    color: #1E416B;
+}
+
+.pdpPanelRedes{
+    margin-top: 0.5em;
+    border: 1px solid #1E416B;
+    border-radius: 0.5em;
+    padding: 0em 1em 1em  1em;
+}
+
+.colorBlue{
+    color:#1E416B;
+    font-weight: 500;
+    padding-left: 1em;
+    padding-right: 0.5em;
+}
+
+.pdpTitleCompany{
+    font-weight: 600;
+    color: #D03D23;
+    font-size: 30px;
+}
+.pdpTitleProduct{
+    font-weight: 600;
+    color: #1E416B;
+    font-size: 28px;
+}
+
+.pdpCategoryContainer{
+    margin-top: 1em;
+    width: 100%;
+    border-bottom: 2px solid #1E416B;
+}
+.pdpCategoryTitle{
+    background-color: #1E416B;
+    color: #fff;
+    font-size: 16px;
+    width: auto;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.5em;
+    border-radius: 10px 10px 10px 0px;
+}
+.pdpCategoryDescription{
+    padding-left: 1em;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
 }

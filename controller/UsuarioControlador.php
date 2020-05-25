@@ -27,11 +27,9 @@ class UsuarioControlador{
     $this->usuModel->set("name", $data['name']);
     $this->usuModel->set("mail", $data['mail']);
     $this->usuModel->set("pass", $data['pass']);
-    $this->usuModel->set("state", $data['state']);
-    $this->usuModel->set("type", $data['type']);
-    $this->empModel->insertarUsuario();
+    $this->usuModel->insertarUsuario();
     echo "<script>alert('Usuario creado correctamente');
-    location.href='';</script>";
+    location.href='login.php';</script>";
   }
 
 

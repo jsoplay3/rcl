@@ -16,20 +16,21 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/myStyle.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 
 <?php
+      require_once('../controller/EmpresaControlador.php');
       $empresa = new EmpresaControlador();
       $emp = $empresa->consultarEmpresaPorId($_POST['idCompany']);
       foreach ($emp as $key) {
-      echo '
-  <?php
-    require_once('../controller/EmpresaControlador.php');
-  ?>
+        $string = "src='https://www.facebook.com/plugins/page.php?href=".$key['FB_URL']."%2F%3Ffref%3Dts&amp;tabs=timeline&amp;width=376&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=533836100158507'"; 
+        
+?>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Rionegro Compra Local</a>
+    <img src="../landing/images/logoRcl.svg" height="60px"/>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Inicio</a></li>
         <li><a href="../views/login.php">Registrar Empresa</a></li>
@@ -46,7 +47,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Rionegro Compra Local</h1>
+        <h1 class="header center teal-text text-lighten-2"><?php echo $key['NAME_COMPANY'] ?></h1>
         <div class="row center">
           <h5 class="header col s12 light">Inscríbete tu negocio en nuestro sistema para aumentar tus ventas a </h5>
         </div>
@@ -67,27 +68,52 @@
       <!--   Icon Section   -->
       <div class="row">
       
+        <div class="col s12 m8 ">
+            <div class="row">
+              <div class="col s12 m6 ">
+                <div class="pdpTitleCompany"><?php echo $key['NAME_COMPANY'] ?></div>
+                <div class="pdpCategoryContainer">
+                  <span class="pdpCategoryTitle">Categoría<?php echo $key['CATEGORY_COMPANY'] ?></span><span class="pdpCategoryDescription">Alimentos y Concentrados</span>
+                </div>
+                
+                <p><?php echo $key['DESCRIPTION_COMPANY'] ?></p>
+              </div>
+
+              <div class="col s12 m6">
+                <div class="pdpPanelInfoCompany">
+                  
+                  <h5 class="pdpTitleRedes">Información de la Empresa</h5>
+                  <div class="itemInfoCompany"><i class="material-icons">contacts</i><span class="colorBlue">Contacto: </span><?php echo $key['CONTACT_COMPANY'] ?></div>
+                  <div class="itemInfoCompany"><i class="material-icons">directions</i><span class="colorBlue"> Dirección: </span><?php echo $key['ADDRESS_COMPAMY'] ?></div>
+                  <div class="itemInfoCompany"><i class="material-icons">local_phone</i><span class="colorBlue"> Teléfono Fijo: </span><?php echo $key['PHONE_COMPANY'] ?></div>
+                  <div class="itemInfoCompany"><i class="material-icons">settings_cell</i><span class="colorBlue"> Celular: </span><?php echo $key['CEL_COMPANY'] ?></div>
+                  <div class="itemInfoCompany"><i class="material-icons">email</i><span class="colorBlue"> Mail: </span><?php echo $key['MAIL_COMPANY'] ?></div>
+                  <div class="itemInfoCompany"><i class="material-icons">explore</i><span class="colorBlue"> Página Web: </span><?php echo $key['WEB_URL'] ?></div>
+                  
+                </div>
+                <div class="pdpPanelRedes">
+                <h5 class="pdpTitleRedes">Nuestras Redes Sociales</h5>
+                  <div class="redesContainer">
+                    <a href="'.$key['FB_URL'].'" target="_blank" alt="Visita nuestro FaceBook"><img src="images/facebook.svg" height="40px"/></a>
+                    <a href="'.$key['INS_URL'].'" target="_blank" alt="Visita nuestro Instagram"><img src="images/instagram.svg" height="40px"/></a>
+                    <a href="'.$key['YT_URL'].'" target="_blank" alt="Visita nuestro canal en Youtube"><img src="images/youtube.svg" height="40px"/></a>
+                    <a href="https://api.whatsapp.com/send?phone=+57'.$key['CEL_COMPANY'].'" target="_blank" alt="Visita nuestro Whatsap"><img src="images/whatsapp.svg" height="40px"/></a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+                <span class="pdpTitleProduct">Descripción del Producto o Servicio</span>
+                <p><?php echo $key['PRODUCT_DESCRIPTION'] ?></p>
+            </div>
+            <div class="row">
+            
+            </div>
+        </div>
+
         <div class="col s12 m4">
-          <div class="card ">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="../utils/img_logo_coompanies/'.$key['LOGO_URL'].'">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">'.$key['NAME_COMPANY'].'<i class="material-icons right">more_vert</i></span>
-              <p><span>Página Web: </span><a href="'.$key['WEB_URL'].'" target="_blank">'.$key['WEB_URL'].'</a></p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">'.$key['NAME_COMPANY'].'<i class="material-icons right">close</i></span>
-              <p>'.$key['DESCRIPTION_COMPANY'].'</p>
-              <span class="card-title grey-text text-darken-4">Poroductos</span>
-              <p>'.$key['PRODUCT_DESCRIPTION'].'</p>
-            </div>
-            <div class="card-action">
-              <a href="'.$key['FB_URL'].'" target="_blank">Facebook</a>
-              <a href="'.$key['INS_URL'].'" target="_blank">Instagram</a>
-              <a href="'.$key['YT_URL'].'" target="_blank">Youtube</a>
-            </div>
-          </div>
+        <iframe style="border: none; overflow: hidden;" <?php echo $string ?>  width="376" height="500" frameborder="0" scrolling="no"></iframe>
         </div>
       
         
@@ -160,7 +186,9 @@
       </div>
     </div>
   </footer>
-
+<?php
+      }
+?>
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

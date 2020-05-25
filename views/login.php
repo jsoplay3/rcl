@@ -15,6 +15,11 @@
 </head>
 <body>
 
+<?php
+    require_once('../controller/UsuarioControlador.php');
+    $usuario = new UsuarioControlador();
+?>
+
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="container login-container">
@@ -29,7 +34,7 @@
                             <input name="pass" type="password" class="form-control" placeholder="Contraseña *" require />
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btnSubmit" value="Ingresar" />
+                            <input type="submit" class="btnSubmit" value="Ingresar"  />
                         </div>
                         <div class="form-group">
                             <a href="#" class="ForgetPwd">Recuperar Contraseña</a>
@@ -41,7 +46,7 @@
                 </div>
                 <div class="col-md-6 login-form-2">
                     <h3>Registrarse</h3>
-                    <form action="..controller/singUp.php" method="post">
+                    <form action="login.php" method="post">
                         <div class="form-group">
                             <input name="document" type="text" class="form-control" placeholder="Documento *" require />
                         </div>
@@ -55,13 +60,18 @@
                             <input name="pass" type="password" class="form-control" placeholder="Contraseña *" require />
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btnSubmit" value="Registrarse" />
+                            <input type="submit" class="btnSubmit" name="regUsuario" value="Registrarse" />
                         </div>
                         <!-- <div class="form-group">
 
                             <a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
                         </div> -->
                     </form>
+                    <?php
+                        if(isset($_POST['regUsuario']) == "Registrarse"){
+                            $usuario->validarUsuario($_POST);
+                          }
+                    ?>
                 </div>
             </div>
         </div>
