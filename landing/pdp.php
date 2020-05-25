@@ -73,7 +73,7 @@
               <div class="col s12 m6 ">
                 <div class="pdpTitleCompany"><?php echo $key['NAME_COMPANY'] ?></div>
                 <div class="pdpCategoryContainer">
-                  <span class="pdpCategoryTitle">Categoría<?php echo $key['CATEGORY_COMPANY'] ?></span><span class="pdpCategoryDescription">Alimentos y Concentrados</span>
+                  <span class="pdpCategoryTitle"><i class="material-icons">style</i><?php echo $key['CATEGORY_COMPANY'] ?></span><span class="pdpCategoryDescription">Alimentos y Concentrados</span>
                 </div>
                 
                 <p><?php echo $key['DESCRIPTION_COMPANY'] ?></p>

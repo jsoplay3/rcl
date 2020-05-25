@@ -26,12 +26,6 @@
             </div>
             <div class="panel-body">
 
-<<<<<<< HEAD
-            <div class="row alignRight">
-            <button type="button" class="btn btn-default" > <!-- data-toggle="modal" data-target="#myModal"-->
-                <a href="formCompany.php"><span class="glyphicon glyphicon-plus"></span> Agregar Empresa</a>
-            </button>
-=======
             <div class="row alignLeft">
             <form action="adminCompany.php" method="post"> 
             <div class="col-md-3">
@@ -65,7 +59,6 @@
               </div>
             </div>
             </form>
->>>>>>> 90172076168c9c859b69feeaae107cb6fb465961
             </div>
 
             <?php
