@@ -11,6 +11,7 @@
     </head>
     <body>
         <?php
+          $dataFilt = "";
           require_once('../controller/EmpresaControlador.php');
           require('menu/menu.php');
           $company = new EmpresaControlador();
