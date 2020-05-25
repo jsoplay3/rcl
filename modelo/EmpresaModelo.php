@@ -40,7 +40,8 @@ class EmpresaModelo {
       $sql = "SELECT ID, NIT, NAME_COMPANY, ADDRESS_COMPAMY, PHONE_COMPANY, CEL_COMPANY, MAIL_COMPANY, 
       CONTACT_COMPANY, LOGO_URL, WEB_URL, FB_URL, TW_URL, INS_URL, YT_URL, DESCRIPTION_COMPANY, CATEGORY_COMPANY, 
       PRODUCT_DESCRIPTION, DATE_CREATED, DATE_UPDATE, USER_UPDATE
-      FROM company";
+      FROM company
+      WHERE ESTADO_EMPRESA = 1";
       $datos = $this->con->consultaRetorno($sql);
       return $datos;
     }

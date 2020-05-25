@@ -65,14 +65,13 @@
         </td>
         </tr>
         ";
-
-        $company = new EmpresaControlador();
-        if(isset($_POST['delete'])  == "eliminarEmp"){
-          //Llamar a la funcion de cambiar estado a 0
-          // $company->inactivaEmpresa($_POST);
-          echo "hola";
-        }
       }
+
+      $company = new EmpresaControlador();
+      if(isset($_POST['delete'])  == "eliminarEmp"){
+        $company->inactivaEmpresa($_POST);
+      }
+
       ?>
       <!-- <tr>
         <td>Exito</td>

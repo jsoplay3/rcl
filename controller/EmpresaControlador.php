@@ -56,7 +56,8 @@ class EmpresaControlador{
     $this->empModel->set("descripcionProd", $data['product_description']);
     $this->empModel->insertarEmpresa();
     // echo "{mensaje:Empresa creada correctamente'}";
-    echo "<script>alert('Empresa creada correctamente');</script>";
+    echo "<script>alert('Empresa creada correctamente');
+    location.href='formCompany.php';</script>";
     // echo "<script>location.reload();</script>";
   }
 
@@ -104,7 +105,8 @@ class EmpresaControlador{
   public function inactivaEmpresa($data){
     $this->empModel->set("id", $data['deleteId']);
     $datos = $this->empModel->inactivaEmpresa();
-    echo "<script>alert('Empresa inactivada correctamente');</script>";
+    echo "<script>alert('Empresa inactivada correctamente');
+    location.href='adminCompany.php';</script>";
   }
 }
 
