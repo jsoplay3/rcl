@@ -35,10 +35,10 @@
         <br><br>
         <h1 class="header center teal-text text-lighten-2">Rionegro Compra Local</h1>
         <div class="row center">
-          <h5 class="header col s12 light">Inscríbete tu negocio en nuestro sistema para aumentar tus ventas a </h5>
+          <h5 class="header col s12 light">Registra tu negocio en nuestro sistema para aumentar tus ventas a </h5>
         </div>
         <div class="row center">
-          <a href="../views/login.php" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Inscribir Empresa</a>
+          <a href="../views/login.php" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Registrar Empresa</a>
         </div>
         <br><br>
 
@@ -70,7 +70,7 @@
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">'.$key['NAME_COMPANY'].'<i class="material-icons right">close</i></span>
               <p>'.$key['DESCRIPTION_COMPANY'].'</p>
-              <span class="card-title grey-text text-darken-4">Poroductos</span>
+              <span class="card-title grey-text text-darken-4">Productos</span>
               <p>'.$key['PRODUCT_DESCRIPTION'].'</p>
             </div>
             <div class="card-action">

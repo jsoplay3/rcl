@@ -55,7 +55,7 @@
       <div class="row">
       <?php
       $empresa = new EmpresaControlador();
-      $emp = $empresa->consultarEmpresaPorId();
+      $emp = $empresa->consultarEmpresaPorId($idSolcitado);
       foreach ($emp as $key) {
       echo '
         <div class="col s12 m4">
