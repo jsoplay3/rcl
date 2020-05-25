@@ -76,8 +76,18 @@ class EmpresaControlador{
   }
 
   public function consultarEmpresaPorNit($data){
-    $this->empModel->set("nit", $data['nit']);
+    $this->empModel->set("nit", $data);
     $datos = $this->empModel->consultarEmpresaPorNit();
+    $empresa = array();
+    while($row = $datos->fetch_array()){
+      $rows[] = $row;
+    }
+    return $rows;
+  }
+
+  public function consultarEmpresaPorId($id){
+    $this->empModel->set("id", $id);
+    $datos = $this->empModel->consultarEmpresaPorId();
     $empresa = array();
     while($row = $datos->fetch_array()){
       $rows[] = $row;

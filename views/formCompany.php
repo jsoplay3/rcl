@@ -11,7 +11,11 @@
     <body>
         <?php
             require_once('../controller/EmpresaControlador.php');
-            require('menu/menu.php')
+            require('menu/menu.php');
+            $company = new EmpresaControlador();
+            if(isset($_GET['id'])){
+              $data = $company->consultarEmpresaPorId($_GET['id']);
+            }
         ?>
         <div class="container">
 
@@ -28,7 +32,8 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="nit">Nit:</label>
-                        <input class="form-control" type="text" name="nit" placeholder="000000000-1" required/>
+                        <input class="form-control" type="text" name="nit" placeholder="000000000-1" 
+                        value="<?php echo $data['NIT']; ?>" required/>
                         </div>
                     </div>
                 
@@ -165,7 +170,6 @@
 
             <?php
             if(isset($_POST['enviar']) == "Registrar Empresa"){
-              $company = new EmpresaControlador();
               $company->validarEmpresa($_POST);
             }
             ?>

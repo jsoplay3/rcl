@@ -45,22 +45,24 @@
       foreach ($emp as $key) {
         echo "<tr>
         <td>".$key['NAME_COMPANY']."</td>
-        <td>".$key['NAME_COMPANY']."</td>
+        <td>".$key['CATEGORY_COMPANY']."</td>
         <td>".$key['CEL_COMPANY']."</td>
         <td>".$key['MAIL_COMPANY']."</td>
         <td class='alignRight'>
             <form action='adminCompany.php' method='post'>
             
             <input type='hidden' name='deleteId' value='".$key['ID']."'/>
-            <input type='submit' name='delete' value='eliminarEmp'/>
-
-
+            <input type='submit' name='delete' value='Eliminar' class='glyphicon-trash'/>
+            
             <!--<button type='button' class='btn btn-default'>
                 <span class='glyphicon glyphicon-trash'></span>
             </button>-->
-            <button type='button' class='btn btn-default'>
+
+            <!--<button type='button' class='btn btn-default'>
                 <span class='glyphicon glyphicon-pencil'></span>
-            </button>
+            </button>-->
+
+            <input type='submit' name='modify' value='Modificar' class='glyphicon-pencil'/>
             </form>
         </td>
         </tr>
@@ -68,8 +70,13 @@
       }
 
       $company = new EmpresaControlador();
-      if(isset($_POST['delete'])  == "eliminarEmp"){
+      if(isset($_POST['delete'])  == "Eliminar"){
         $company->inactivaEmpresa($_POST);
+      }
+
+      if(isset($_POST['modify'])  == "Modificar"){
+        $editar= $_POST['deleteId'];
+        echo "<script> window.location='formCompany.php?id=".$editar."' </script>";
       }
 
       ?>
