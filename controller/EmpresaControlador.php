@@ -103,6 +103,8 @@ class EmpresaControlador{
   }
 
   public function actualizarEmpresa($data){
+    $this->empModel->set("nit", $data['nit']);
+    $this->empModel->set("nombre", $data['name_company']);
     $this->empModel->set("direccion", $data['address_company']);
     $this->empModel->set("telefono", $data['phone_company']);
     $this->empModel->set("celular", $data['cel_company']);
@@ -114,9 +116,11 @@ class EmpresaControlador{
     $this->empModel->set("intUrl", $data['ins_url']);
     $this->empModel->set("ytUrl", $data['yt_url']);
     $this->empModel->set("descripcion", $data['description_company']);
+    $this->empModel->set("categoria", $data['category_company']);
     $this->empModel->set("descripcionProd", $data['product_description']);
     $datos = $this->empModel->actualizarEmpresa();
-    echo "<script>alert('Empresa creada correctamente');</script>";
+    echo "<script>alert('Empresa modificada correctamente');
+    location.href='adminCompany.php';</script></script>";
   }
 
   public function inactivaEmpresa($data){
