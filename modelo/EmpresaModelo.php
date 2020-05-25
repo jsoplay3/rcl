@@ -7,8 +7,6 @@ class EmpresaModelo {
     private $id, $nit, $nombre, $direccion, $telefono, $celular, $email, $contacto,
     $logoUrl, $webUrl, $fbUrl, $tw_url, $intUrl, $ytUrl, $descripcion, $categoria,
     $descripcionProd, $fechaCrea, $fechaModqifica, $userModifica; 
-
-    private $estado, $user;
      
     public function __construct(){
       $this->con = new Conectar();
@@ -77,10 +75,11 @@ class EmpresaModelo {
   
     public function actualizarEmpresa(){
       $sql = "UPDATE company 
-      SET ADDRESS_COMPAMY='$this->direccion', PHONE_COMPANY='$this->telefono', CEL_COMPANY='$this->celular', 
+      SET NAME_COMPANY='$this->nombre', ADDRESS_COMPAMY='$this->direccion', PHONE_COMPANY='$this->telefono', CEL_COMPANY='$this->celular', 
       MAIL_COMPANY='$this->email', CONTACT_COMPANY='$this->contacto', WEB_URL='$this->webUrl', FB_URL='$this->fbUrl', 
       TW_URL='$this->tw_url', INS_URL='$this->intUrl', YT_URL='$this->ytUrl', DESCRIPTION_COMPANY='$this->descripcion',
-      PRODUCT_DESCRIPTION='$this->descripcionProd', DATE_UPDATE=NOW(), USER_UPDATE='$this->user'
+      CATEGORY_COMPANY = '$this->categoria', PRODUCT_DESCRIPTION='$this->descripcionProd', 
+      DATE_UPDATE=NOW(), USER_UPDATE='$this->user'
       WHERE NIT = '$this->nit'";
       $this->con->consultaSimple($sql, 0);
 
