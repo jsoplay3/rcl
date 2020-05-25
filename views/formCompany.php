@@ -160,11 +160,11 @@
                     <textarea class="form-control" rows="5" name="product_description"></textarea>
                 </div>
             
-                <input type="submit" value="Registrar Empresa" class="btn btn-success btn-block"/>
+                <input type="submit" name="enviar" value="Registrar Empresa" class="btn btn-success btn-block"/>
             </form>
 
             <?php
-            if(isset($_POST)){
+            if(isset($_POST['enviar']) == "Registrar Empresa"){
               $company = new EmpresaControlador();
               $company->validarEmpresa($_POST);
             }
