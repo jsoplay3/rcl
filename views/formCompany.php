@@ -1,3 +1,6 @@
+<?php
+  include('../controller/modSession.php');
+?>
 <!DOCTYPE html>
 <html>
     <head>

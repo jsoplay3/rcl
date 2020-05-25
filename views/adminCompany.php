@@ -1,3 +1,6 @@
+<?php
+  include('../controller/modSession.php');
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,8 +26,8 @@
             <div class="panel-body">
 
             <div class="row alignRight">
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
-                <span class="glyphicon glyphicon-plus"></span> Agregar Empresa
+            <button type="button" class="btn btn-default" > <!-- data-toggle="modal" data-target="#myModal"-->
+                <a href="formCompany.php"><span class="glyphicon glyphicon-plus"></span> Agregar Empresa</a>
             </button>
             </div>
 

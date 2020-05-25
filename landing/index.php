@@ -11,11 +11,15 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+  <?php
+    require_once('../controller/EmpresaControlador.php');
+  ?>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">FullStack</a>
+      <a id="logo-container" href="#" class="brand-logo">Rionegro Compra Local</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Inicio</a></li>
+        <li><a href="../views/login.php">Registrar Empresa</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
@@ -29,18 +33,18 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
+        <h1 class="header center teal-text text-lighten-2">Rionegro Compra Local</h1>
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 light">Inscríbete tu negocio en nuestro sistema para aumentar tus ventas a </h5>
         </div>
         <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+          <a href="../views/login.php" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Inscribir Empresa</a>
         </div>
         <br><br>
 
       </div>
     </div>
-    <div class="parallax"><img src="banner_ppal.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="images/banner_rionegro1.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
 
@@ -49,58 +53,37 @@
 
       <!--   Icon Section   -->
       <div class="row">
+      <?php
+      $empresa = new EmpresaControlador();
+      $emp = $empresa->consultarEmpresa();
+      foreach ($emp as $key) {
+      echo '
         <div class="col s12 m4">
           <div class="card ">
             <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="https://materializecss.com/images/office.jpg">
+              <img class="activator" src="../utils/img_logo_coompanies/'.$key['LOGO_URL'].'">
             </div>
             <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Nombre Empresa<i class="material-icons right">more_vert</i></span>
-              <p><span>Página Web: </span><a href="#" target="_blank">Página Web</a></p>
+              <span class="card-title activator grey-text text-darken-4">'.$key['NAME_COMPANY'].'<i class="material-icons right">more_vert</i></span>
+              <p><span>Página Web: </span><a href="'.$key['WEB_URL'].'" target="_blank">'.$key['WEB_URL'].'</a></p>
             </div>
             <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Nombre Empresa<i class="material-icons right">close</i></span>
-              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              <span class="card-title grey-text text-darken-4">'.$key['NAME_COMPANY'].'<i class="material-icons right">close</i></span>
+              <p>'.$key['DESCRIPTION_COMPANY'].'</p>
+              <span class="card-title grey-text text-darken-4">Poroductos</span>
+              <p>'.$key['PRODUCT_DESCRIPTION'].'</p>
             </div>
             <div class="card-action">
-              <a href="#">Facebook</a>
-              <a href="#">Instagram</a>
-              <a href="#">Youtube</a>
+              <a href="'.$key['FB_URL'].'" target="_blank">Facebook</a>
+              <a href="'.$key['INS_URL'].'" target="_blank">Instagram</a>
+              <a href="'.$key['YT_URL'].'" target="_blank">Youtube</a>
             </div>
           </div>
         </div>
-
-        <div class="col s12 m4">
-          <div class="card ">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="https://materializecss.com/images/office.jpg">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-              <p><a href="#">This is a link</a></p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-              <p>Here is some more information about this product that is only revealed once clicked on.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="card ">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="https://materializecss.com/images/office.jpg">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-              <p><a href="#">This is a link</a></p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-              <p>Here is some more information about this product that is only revealed once clicked on.</p>
-            </div>
-          </div>
-        </div>
+        ';
+      }
+      ?>
+        
       </div>
 
     </div>
@@ -111,11 +94,11 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 light">Endendemos que estar contigo es brindarte herramientas para tu negocio</h5>
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="images/banner_igleasia.jpeg" alt="Unsplashed background img 2"></div>
   </div>
 
   <div class="container">
@@ -125,7 +108,7 @@
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <h4>Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+          <p class="left-align light">Rionegro es un municipio de Colombia, ubicado en el departamento de Antioquia. Se encuentra en el valle de San Nicolás o también llamado Altiplano del Oriente, en la subregión Oriente, siendo la población más grande, así como la que concentra el movimiento económico de la subregión. Su nombre oficial es Ciudad Santiago de Arma de Rionegro.1​ Limita al norte con los municipios de Guarne y San Vicente, por el este con los municipios de Marinilla y El Carmen de Viboral, por el sur con el municipio de La Ceja, y por el oeste con los municipios de El Retiro, Envigado y Medellín </p>
         </div>
       </div>
 
@@ -141,7 +124,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src="images/banner_comercio.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
   <footer class="page-footer teal">
