@@ -129,6 +129,14 @@ class EmpresaControlador{
     echo "<script>alert('Empresa inactivada correctamente');
     location.href='adminCompany.php';</script>";
   }
+
+  public function consultarEmpresaLike($data){
+    $this->empModel->set("nombre", $data['nameCom']);
+    $this->empModel->set("descripcion", $data['descCom']);
+    $this->empModel->set("categoria", $data['category_company']);
+    $datos = $this->empModel->consultarEmpresaLike();
+    return $datos;
+  }
 }
 
 

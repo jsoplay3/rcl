@@ -29,7 +29,7 @@ class UsuarioControlador{
     $this->usuModel->set("pass", $data['pass']);
     $this->usuModel->set("state", $data['state']);
     $this->usuModel->set("type", $data['type']);
-    $this->empModel->insertarUsuario();
+    $this->usuModel->insertarUsuario();
     echo "<script>alert('Usuario creado correctamente');
     location.href='';</script>";
   }
@@ -37,7 +37,6 @@ class UsuarioControlador{
 
   public function consultarUsuarios(){
     $datos = $this->usuModel->consultarUsuarios();
-    $usuarios = array();
     while($row = $datos->fetch_array()){
       $rows[] = $row;
     }
@@ -55,10 +54,16 @@ class UsuarioControlador{
   }
 
   public function inactivaUsuario($data){
-    $this->usuModel->set("document", $data['document']);
-    $datos = $this->usuModel->inactivaUsuario();
+    $this->usuModel->set("id", $data['idUser']);
+    if($data['estado'] == 1){
+      $estado = 0;
+    } else {
+      $estado = 1;
+    }
+    $this->usuModel->set("state", $estado);
+    $datos = $this->usuModel->inactivarUsuario();
     echo "<script>alert('Usuario inactivado correctamente');
-    location.href='';</script>";
+    location.href='adminUser.php';</script>";
   }
 }
 

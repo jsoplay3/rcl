@@ -25,14 +25,15 @@ class UsuarioModelo {
     }
   
     public function insertarUsuario(){
-      $sql = "INSERT INTO users(ID, DOCUMENT, NAME, MAIL, PASS, STATE, TYPE, DATE_CREATED) 
-      VALUES ('$this->document','$this->name','$this->mail', '$this->pass','$this->state','$this->type',NOW())";
+      $sql = "INSERT INTO users(ID, DOCUMENT, NAME, MAIL, PASS, DATE_CREATED) 
+      VALUES ('$this->document','$this->name','$this->mail', '$this->pass', NOW())";
       $this->con->consultaSimple($sql, 0);
     }
   
     public function consultarUsuarios(){
-      $sql = "SELECT ID, DOCUMENT, NAME, MAIL, PASS, CASE STATE WHEN 1 THEN 'Activo' WHEN 0 THEN 'Inactivo' ELSE ' ' END AS STATE_USER ,
-      TYPE, DATE_CREATED,DATE_UPDAT, USER_UPDATE 
+      $sql = "SELECT ID, DOCUMENT, NAME, MAIL, PASS, 
+      CASE STATE WHEN 1 THEN 'Activo' WHEN 0 THEN 'Inactivo' ELSE ' ' END AS STATE_USER ,
+      TYPE, STATE
       FROM users";
       $datos = $this->con->consultaRetorno($sql);
       return $datos;
@@ -47,11 +48,10 @@ class UsuarioModelo {
       return $datos;
     }
 
- 
-    public function inactivaUsuario(){
+    public function inactivarUsuario(){
       $sql = "UPDATE users 
-      SET STATE = 0
-      WHERE DOCUMENT = $this->document";
+      SET STATE = $this->state
+      WHERE ID = $this->id";
       $this->con->consultaSimple($sql, 0);
     }
   }

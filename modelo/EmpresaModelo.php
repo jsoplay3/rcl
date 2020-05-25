@@ -37,7 +37,8 @@ class EmpresaModelo {
     public function consultarEmpresa(){
       $sql = "SELECT ID, NIT, NAME_COMPANY, ADDRESS_COMPAMY, PHONE_COMPANY, CEL_COMPANY, MAIL_COMPANY, 
       CONTACT_COMPANY, LOGO_URL, WEB_URL, FB_URL, TW_URL, INS_URL, YT_URL, DESCRIPTION_COMPANY, 
-      PRODUCT_DESCRIPTION, DATE_CREATED, DATE_UPDATE, USER_UPDATE, CASE CATEGORY_COMPANY 
+      PRODUCT_DESCRIPTION, DATE_CREATED, DATE_UPDATE, USER_UPDATE, 
+      CASE CATEGORY_COMPANY 
       WHEN 1 THEN 'Alimentos preparados para consumo inmediato' 
       WHEN 2 THEN 'Productos para el cuidado personal' 
       WHEN 3 THEN 'Productos de limpieza' 
@@ -65,7 +66,16 @@ class EmpresaModelo {
     public function consultarEmpresaPorId(){
       $sql = "SELECT ID, NIT, NAME_COMPANY, ADDRESS_COMPAMY, PHONE_COMPANY, CEL_COMPANY, MAIL_COMPANY, 
       CONTACT_COMPANY, LOGO_URL, WEB_URL, FB_URL, TW_URL, INS_URL, YT_URL, DESCRIPTION_COMPANY, CATEGORY_COMPANY, 
-      PRODUCT_DESCRIPTION, DATE_CREATED, DATE_UPDATE, USER_UPDATE
+      PRODUCT_DESCRIPTION, DATE_CREATED, DATE_UPDATE, USER_UPDATE,
+      CASE CATEGORY_COMPANY 
+      WHEN 1 THEN 'Alimentos preparados para consumo inmediato' 
+      WHEN 2 THEN 'Productos para el cuidado personal' 
+      WHEN 3 THEN 'Productos de limpieza' 
+      WHEN 4 THEN 'Productos para el Hogar' 
+      WHEN 5 THEN 'Tecnología' 
+      WHEN 6 THEN 'Producto artesanales' 
+      WHEN 7 THEN 'Productos de entretenimiento y cultura' 
+      ELSE ' ' END AS CATEGORY
       FROM company
       WHERE ID = '$this->id'";
       $datos = $this->con->consultaRetorno($sql);
@@ -90,6 +100,27 @@ class EmpresaModelo {
       SET ESTADO_EMPRESA = 0
       WHERE ID = $this->id";
       $this->con->consultaSimple($sql, 0);
+    }
+
+    public function consultarEmpresaLike(){
+      $sql = "";
+      $sql .= "SELECT ID, NIT, NAME_COMPANY, ADDRESS_COMPAMY, PHONE_COMPANY, CEL_COMPANY, MAIL_COMPANY, 
+      CONTACT_COMPANY, LOGO_URL, WEB_URL, FB_URL, TW_URL, INS_URL, YT_URL, DESCRIPTION_COMPANY, CATEGORY_COMPANY, 
+      PRODUCT_DESCRIPTION, DATE_CREATED, DATE_UPDATE, USER_UPDATE
+      FROM company
+      WHERE 1 = 1 ";
+      
+      if($this->nombre != ''){
+        $sql .= " AND NAME_COMPANY LIKE '%$this->nombre%'";
+      }
+     if($this->descripcion != ''){
+        $sql .= " AND DESCRIPTION_COMPANY LIKE '%$this->descripcion%'";
+      } 
+      if($this->categoria != 0){
+        $sql .= " AND CATEGORY_COMPANY = $this->categoria";
+      }
+      $datos = $this->con->consultaRetorno($sql);
+      return $datos;
     }
   }
 
