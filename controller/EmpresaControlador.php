@@ -57,10 +57,8 @@ class EmpresaControlador{
     $estatus = isset($data['status_company']) == ''?0:1;
     $this->empModel->set("status", $estatus);
     $this->empModel->insertarEmpresa();
-    // echo "{mensaje:Empresa creada correctamente'}";
     echo "<script>alert('Empresa creada correctamente');
     location.href='formCompany.php';</script>";
-    // echo "<script>location.reload();</script>";
   }
 
 
@@ -105,6 +103,12 @@ class EmpresaControlador{
   }
 
   public function actualizarEmpresa($data){
+
+    if($_FILES['logo_url']['size'] > 0){
+      $nombreLogo = self::almacenarImgLogo($data);
+      $this->empModel->set('logoUrl', $nombreLogo);
+    }
+
     $this->empModel->set("nit", $data['nit']);
     $this->empModel->set("nombre", $data['name_company']);
     $this->empModel->set("direccion", $data['address_company']);
