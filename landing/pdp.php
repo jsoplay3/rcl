@@ -27,6 +27,10 @@
       foreach ($emp as $key) {
         $string = "src='https://www.facebook.com/plugins/page.php?href=".$key['FB_URL']."%2F%3Ffref%3Dts&amp;tabs=timeline&amp;width=376&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=533836100158507'"; 
         $stringLogo = 'src="../utils/img_logo_coompanies/'.$key['LOGO_URL'].'"';
+        $stringFB= 'href="'.$key['FB_URL'].'"';
+        $stringINS='href="'.$key['INS_URL'].'"';
+        $stringYT='href="'.$key['YT_URL'].'"';
+        $stringWS='href="https://api.whatsapp.com/send?phone=+57'.$key['CEL_COMPANY'].'"';
 ?>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
@@ -93,10 +97,10 @@
                 <div class="pdpPanelRedes">
                 <h5 class="pdpTitleRedes">Nuestras Redes Sociales</h5>
                   <div class="redesContainer">
-                    <a href="'.$key['FB_URL'].'" target="_blank" alt="Visita nuestro FaceBook"><img src="images/facebook.svg" height="40px"/></a>
-                    <a href="'.$key['INS_URL'].'" target="_blank" alt="Visita nuestro Instagram"><img src="images/instagram.svg" height="40px"/></a>
-                    <a href="'.$key['YT_URL'].'" target="_blank" alt="Visita nuestro canal en Youtube"><img src="images/youtube.svg" height="40px"/></a>
-                    <a href="https://api.whatsapp.com/send?phone=+57'.$key['CEL_COMPANY'].'" target="_blank" alt="Visita nuestro Whatsap"><img src="images/whatsapp.svg" height="40px"/></a>
+                    <a <?php echo $stringFB ?>  target="_blank" alt="Visita nuestro FaceBook"><img src="images/facebook.svg" height="40px"/></a>
+                    <a <?php echo $stringINS ?> target="_blank" alt="Visita nuestro Instagram"><img src="images/instagram.svg" height="40px"/></a>
+                    <a <?php echo $stringYT ?> target="_blank" alt="Visita nuestro canal en Youtube"><img src="images/youtube.svg" height="40px"/></a>
+                    <a <?php echo $stringWS ?> target="_blank" alt="Visita nuestro Whatsap"><img src="images/whatsapp.svg" height="40px"/></a>
                   </div>
                 </div>
               </div>
@@ -162,10 +166,10 @@
   <div class="container">
     <div class="section">
 
-      <div class="row">
+    <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
+          <h4>Rionegro Antioquia</h4>
           <p class="left-align light">Rionegro es un municipio de Colombia, ubicado en el departamento de Antioquia. Se encuentra en el valle de San Nicolás o también llamado Altiplano del Oriente, en la subregión Oriente, siendo la población más grande, así como la que concentra el movimiento económico de la subregión. Su nombre oficial es Ciudad Santiago de Arma de Rionegro.1​ Limita al norte con los municipios de Guarne y San Vicente, por el este con los municipios de Marinilla y El Carmen de Viboral, por el sur con el municipio de La Ceja, y por el oeste con los municipios de El Retiro, Envigado y Medellín </p>
         </div>
       </div>
@@ -188,7 +192,7 @@
         <div class="col l3 s12">
           <h5 class="white-text">Alidados</h5>
           <ul>
-            <li><a class="white-text" href="#!">Alcaldía de Rionegro</a></li>
+            <li><a class="white-text" href="https://www.rionegro.gov.co/" target="_blank">Alcaldía de Rionegro</a></li>
             <li><a class="white-text" href="#!">Cámara de Comercio</a></li>
             <li><a class="white-text" href="#!">TecnoParque</a></li>
             <li><a class="white-text" href="#!">Masora</a></li>
@@ -197,10 +201,9 @@
         <div class="col l3 s12">
           <h5 class="white-text">Contacto</h5>
           <ul>
-            <li>Secretaría de Desarrollo Económico</li>
-            <li>Tels. 555-55-55</li>
-            <li>Url: http://www.google.com</li>
-            <li>Correo: admin@rionegro.gov.co</li>
+          <li>Secretaría de Desarrollo Económico</li>
+            <li>Tels. 5204060 | Ext 1350</li>
+            <li>Correo: emprendimiento@rionegro.gov.co</li>
           </ul>
         </div>
       </div>

@@ -14,7 +14,7 @@ function validateUserSignUp() {
     }
 
     valor = document.getElementById("mail").value;
-    if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
+    if( valor == null || valor.length == 0  ) {
         alert("El mail del usuario es solicitado")
       return false;
     }
@@ -26,17 +26,17 @@ function validateUserSignUp() {
     }
 }
 
-function validateLogin() {
+// function validateLogin() {
 
-    valor = document.getElementById("mail").value;
-    if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
-        alert("El mail del usuario es solicitado")
-      return false;
-    }
+//     valor = document.getElementById("mailLogin").value;
+//     if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
+//         alert("El mail del usuario es solicitado")
+//       return false;
+//     }
 
-    valor = document.getElementById("pass").value;
-    if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
-        alert("La contraseña del usuario es solicitada")
-      return false;
-    }
-}
+//     valor = document.getElementById("passLogin").value;
+//     if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
+//         alert("La contraseña del usuario es solicitada")
+//       return false;
+//     }
+// }
