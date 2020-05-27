@@ -35,5 +35,23 @@ class Conectar{
     $datos = $this->con->query($sql);
     return $datos;
   }
+
+  public function autenticaUsuario($user,$pass){
+		$sql = "select
+									  ID,
+									  DOCUMENT,
+									  NAME,
+									  MAIL,
+									  PASS,
+									  STATE,
+									  TYPE
+									  
+									  from users 
+
+									  where MAIL='$user' && PASS='$pass'";
+
+    $datos = $this->con->query($sql);
+    return $datos;
+  }
 }
 ?>

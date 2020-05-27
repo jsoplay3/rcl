@@ -1,7 +1,10 @@
+<?php
+  include('../controller/modSession.php');
+?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>tbl_empresas</title>
+        <title>Gestion Empresas</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -25,38 +28,54 @@
             <div class="panel-body">
 
             <div class="row alignLeft">
-            <form action="adminCompany.php" method="post"> 
-            <div class="col-md-3">
-              <div class="form-group">
-                  <label for="nameCom">Nombre:</label> <input class="form-control" type="text" name="nameCom" placeholder="Nombre empresa" value=""/>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="form-group">
-                  <label for="descCom">Descripcion:</label> <input class="form-control" type="text" name="descCom" placeholder="Descripcion empresa" value=""/>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                  <label for="category_company">Sector:</label>
-                  <select class="form-control" name="category_company" requires>
-                      <option value="0"></option>
-                      <option value="1">Alimentos preparados para consumo inmediato</option>
-                      <option value="2">Productos para el cuidado personal</option>
-                      <option value="3">Productos de limpieza</option>
-                      <option value="4">Productos para el Hogar</option>
-                      <option value="5">Tecnología</option>
-                      <option value="6">Producto artesanales</option>
-                      <option value="7">Productos de entretenimiento y cultura</option>
-                  </select>
+              <form action="adminCompany.php" method="post"> 
+              <div class="col-md-2">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="nameCom" placeholder="Nombre empresa" value=""/>
                 </div>
-            </div>
-            <div class="col-md-2">
-                  <input type="submit" name="buscarEmp" value="Buscar Empresa" class="btn btn-primary"/>
-            </div>
               </div>
-            </div>
-            </form>
+              <div class="col-md-2">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="descCom" placeholder="Descripcion empresa" value=""/>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                    
+                    <select class="form-control" name="category_company" requires>
+                        <option value="0">Sector</option>
+                        <option value="1">Alimentos preparados para consumo inmediato</option>
+                        <option value="2">Productos para el cuidado personal</option>
+                        <option value="3">Productos de limpieza</option>
+                        <option value="4">Productos para el Hogar</option>
+                        <option value="5">Tecnología</option>
+                        <option value="6">Producto artesanales</option>
+                        <option value="7">Productos de entretenimiento y cultura</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                    <input type="submit" name="buscarEmp" value="Buscar Empresa" class="btn btn-primary"/>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                    <form action="adminCompany.php">
+                      <input type="submit" name="buscarEmp" value="Limpiar Búsqueda" class="btn btn-primary"/>
+                    </form>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                    <form action="formCompany.php">
+                      <input type="submit" name="buscarEmp" value="Registrar Empresa" class="btn btn-primary"/>
+                    </fom>
+                  </div>
+              </div>
+                
+              </div>
+              </form>
             </div>
 
             <?php
