@@ -34,12 +34,12 @@
         <li><a href="#">Inicio</a></li>
         <?php
           if (!isset ($_SESSION['uxt_codUsuario'])){
+            echo '<li><a href="../views/login.php">Iniciar Sesión</a></li>';
           }
           else{
-            echo '<li><a href="../views/adminCompany.php">Adminsitrar Empresas</a></li>';
+            echo '<li><a href="../views/adminCompany.php">Administrar Empresas</a></li>';
           }
         ?>
-        <li><a href="../views/login.php">Registrar Empresa</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
