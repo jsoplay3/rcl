@@ -25,6 +25,10 @@
 <div class="container login-container">
             <div class="row">
                 <div class="col-md-6 login-form-1">
+                    <div style="text-align:center">
+                        <img src="../landing/images/logoRcl.svg" height="60px"/>
+                    </div>
+                    
                     <h3>Iniciar Sesión</h3>
                     <form action="../controller/autenticator.php" method="post">
                         <div class="form-group">
@@ -34,7 +38,7 @@
                             <input name="pass" type="password" class="form-control" placeholder="Contraseña *" require />
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btnSubmit" value="Ingresar"  />
+                            <input type="submit" class="btnSubmit" value="Ingresar"/>
                         </div>
                         <div class="form-group">
                             <a href="#" class="ForgetPwd">Recuperar Contraseña</a>

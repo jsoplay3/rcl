@@ -129,10 +129,18 @@
     font-size: 28px;
 }
 
+.pdpTitleMessage{
+    font-weight: 600;
+    color: #1E416B;
+    font-size: 22px;
+    padding-left: 2.3em;
+}
+
 .pdpCategoryContainer{
     margin-top: 1em;
     width: 100%;
     border-bottom: 2px solid #1E416B;
+    
 }
 .pdpCategoryTitle{
     background-color: #1E416B;
@@ -141,13 +149,27 @@
     width: auto;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    padding-top: 0.2em;
-    padding-bottom: 0.5em;
-    border-radius: 10px 10px 10px 0px;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    border-radius: 50%;
+    float: right;
 }
 .pdpCategoryDescription{
     padding-left: 1em;
     text-overflow: ellipsis;
     overflow:hidden;
     white-space:nowrap;
+    width: 10px;
+    color: #1E416B;
+}
+
+.titleBannerBig{
+    font-size: 35px;
+    text-shadow: 2px 2px 0 #000
+}
+
+.containerFormMessage{
+    background-color: rgba(0,0,255,0.01);
+    padding: 0.5em;
+    border-radius: 1em;;
 }

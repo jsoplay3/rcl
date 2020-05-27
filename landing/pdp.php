@@ -26,7 +26,7 @@
       $emp = $empresa->consultarEmpresaPorId($_POST['idCompany']);
       foreach ($emp as $key) {
         $string = "src='https://www.facebook.com/plugins/page.php?href=".$key['FB_URL']."%2F%3Ffref%3Dts&amp;tabs=timeline&amp;width=376&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=533836100158507'"; 
-        
+        $stringLogo = 'src="../utils/img_logo_coompanies/'.$key['LOGO_URL'].'"';
 ?>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
@@ -46,19 +46,18 @@
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2"><?php echo $key['NAME_COMPANY'] ?></h1>
         <div class="row center">
-          <h5 class="header col s12 light">Inscríbete tu negocio en nuestro sistema para aumentar tus ventas a </h5>
-        </div>
+        <img <?php echo $stringLogo ?> width="300px" />
+      </div>
         <div class="row center">
-          <a href="../views/login.php" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Inscribir Empresa</a>
+          <h5 class="header col s12 light">Contáctanos por cualquier medio</h5>
         </div>
+        
         <br><br>
 
       </div>
     </div>
-    <div class="parallax"><img src="images/banner_rionegro1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="images/market2.jpeg" alt="Unsplashed background img 1"></div>
   </div>
 
 
@@ -73,7 +72,7 @@
               <div class="col s12 m6 ">
                 <div class="pdpTitleCompany"><?php echo $key['NAME_COMPANY'] ?></div>
                 <div class="pdpCategoryContainer">
-                  <span class="pdpCategoryTitle"><i class="material-icons">style</i><?php echo $key['CATEGORY_COMPANY'] ?></span><span class="pdpCategoryDescription">Alimentos y Concentrados</span>
+                  <span class="pdpCategoryTitle"><i class="material-icons">style</i></span><span class="pdpCategoryDescription"><?php echo $key['CATEGORY'] ?></span>
                 </div>
                 
                 <p><?php echo $key['DESCRIPTION_COMPANY'] ?></p>
@@ -104,7 +103,7 @@
 
             </div>
             <div class="row">
-                <span class="pdpTitleProduct">Descripción del Producto o Servicio</span>
+                <span class="pdpTitleProduct">Producto o Servicio</span>
                 <p><?php echo $key['PRODUCT_DESCRIPTION'] ?></p>
             </div>
             <div class="row">
@@ -113,7 +112,29 @@
         </div>
 
         <div class="col s12 m4">
-        <iframe style="border: none; overflow: hidden;" <?php echo $string ?>  width="376" height="500" frameborder="0" scrolling="no"></iframe>
+          <div class="row">
+            <iframe style="border: none; overflow: hidden;" <?php echo $string ?>  width="376" height="500" frameborder="0" scrolling="no"></iframe>
+          </div>
+
+
+          <div class="row containerFormMessage">
+            
+          <form class="col s12">
+            <div class="row">
+              <span class="pdpTitleMessage">Dejar un mensaje</span>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="icon_prefix" type="text" class="validate">
+                <label for="icon_prefix">Nombre</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">mode_edit</i>
+                <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                <label for="icon_prefix2">Mensaje</label>
+              </div>
+            </div>
+          </form>
+      
         </div>
       
         
@@ -127,7 +148,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">Endendemos que estar contigo es brindarte herramientas para tu negocio</h5>
+          <h5 class="header col s12 light titleBannerBig">Endendemos que estar contigo es brindarte herramientas para tu negocio</h5>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@
 	$total=new Conectar();
 	$data = $total->autenticaUsuario($_POST['mail'],$_POST['pass']);
 
-
+	
 	$datos = $data->fetch_array();
 
 	if($datos['STATE'] == 1){

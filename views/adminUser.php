@@ -22,11 +22,7 @@
             </div>
             <div class="panel-body">
 
-            <div class="row alignRight">
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
-                <!-- <span class="glyphicon glyphicon-plus"></span> Agregar Usuario -->
-            </button>
-            </div>
+            
 
             <table class="table table-hover">
     <thead>

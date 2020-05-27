@@ -12,14 +12,14 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="adminCompany.php">inicio</a></li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="adminCompany.php">Empresas</a>
+          <a class="dropdown-toggle"  href="adminCompany.php">Empresas</a> <!-- data-toggle="dropdown"-->
           <!-- <ul class="dropdown-menu">
             <li><a href="#">Page 1-1</a></li>
             <li><a href="#">Page 1-2</a></li>
             <li><a href="#">Page 1-3</a></li>
           </ul> -->
         </li>
-        <li><a href="#">Usuarios</a></li>
+        <li><a href="adminUser.php">Usuarios</a></li>
       </ul>
       <form class="navbar-form navbar-left" action="/action_page.php">
       <div class="input-group">
