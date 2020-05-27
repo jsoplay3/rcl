@@ -19,7 +19,7 @@ class UsuarioModelo {
     public function validarUsuario(){
       $sql = "SELECT COUNT(*)  CANT_ID
       FROM users 
-      WHERE DOCUMENT = '$this->document'";
+      WHERE DOCUMENT = '$this->document' AND MAIL = '$this->mail'";
       $datos = $this->con->consultaRetorno($sql);
       return $datos;
     }

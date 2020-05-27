@@ -124,6 +124,7 @@ class EmpresaControlador{
     $this->empModel->set("descripcion", $data['description_company']);
     $this->empModel->set("categoria", $data['category_company']);
     $this->empModel->set("descripcionProd", $data['product_description']);
+    $this->empModel->set("user", $_SESSION['uxt_codUsuario']);
     $datos = $this->empModel->actualizarEmpresa();
     echo "<script>alert('Empresa modificada correctamente');
     location.href='adminCompany.php';</script></script>";
