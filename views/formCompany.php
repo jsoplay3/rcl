@@ -95,15 +95,15 @@
                     </div>
                   </div>
             
-                  <?php if(!isset($data)){?>
+                  <?php if(!isset($data)){ $logoReq = 'required'; } else {$logoReq = '';} ?>
                     <div class="col-md-4">
                     <div class="form-group">
                         <label for="logo_url">Logo:</label><span> Medidas: 300px x 300px JPG/PNG</span>
-                        <input class="form-control" type="file" name="logo_url" required/>
+                        <input class="form-control" type="file" name="logo_url" <?php echo $logoReq; ?>/>
                         <br/>
                     </div>
                   </div>
-                  <?php } ?>
+                  
 
             
                   <div class="col-md-4">

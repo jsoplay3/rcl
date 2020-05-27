@@ -32,10 +32,10 @@
                     <h3>Iniciar Sesión</h3>
                     <form action="../controller/autenticator.php" method="post">
                         <div class="form-group">
-                            <input name="mail" type="text" class="form-control" placeholder="Correo Electrónico *" require />
+                            <input name="mail" type="text" class="form-control" placeholder="Correo Electrónico *" required />
                         </div>
                         <div class="form-group">
-                            <input name="pass" type="password" class="form-control" placeholder="Contraseña *" require />
+                            <input name="pass" type="password" class="form-control" placeholder="Contraseña *" required />
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btnSubmit" value="Ingresar"/>
@@ -52,16 +52,16 @@
                     <h3>Registrarse</h3>
                     <form action="login.php" method="post">
                         <div class="form-group">
-                            <input name="document" type="text" class="form-control" placeholder="Documento *" require />
+                            <input name="document" type="text" class="form-control" placeholder="Documento *" required />
                         </div>
                         <div class="form-group">
-                            <input name="name" type="text" class="form-control" placeholder="Nombre *" require />
+                            <input name="name" type="text" class="form-control" placeholder="Nombre *" required />
                         </div>
                         <div class="form-group">
-                            <input name="mail" type="text" class="form-control" placeholder="Mail *" require />
+                            <input name="mail" type="text" class="form-control" placeholder="Mail *" required />
                         </div>
                         <div class="form-group">
-                            <input name="pass" type="password" class="form-control" placeholder="Contraseña *" require />
+                            <input name="pass" type="password" class="form-control" placeholder="Contraseña *" required />
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btnSubmit" name="regUsuario" value="Registrarse" />

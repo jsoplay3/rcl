@@ -89,7 +89,7 @@ class EmpresaModelo {
       MAIL_COMPANY='$this->email', CONTACT_COMPANY='$this->contacto', WEB_URL='$this->webUrl', FB_URL='$this->fbUrl', 
       TW_URL='$this->tw_url', INS_URL='$this->intUrl', YT_URL='$this->ytUrl', DESCRIPTION_COMPANY='$this->descripcion',
       CATEGORY_COMPANY = '$this->categoria', PRODUCT_DESCRIPTION='$this->descripcionProd', 
-      DATE_UPDATE=NOW(), USER_UPDATE='$this->user'
+      DATE_UPDATE=NOW(), USER_UPDATE='$this->user', LOGO_URL = '$this->logoUrl'
       WHERE NIT = '$this->nit'";
       $this->con->consultaSimple($sql, 0);
 
@@ -117,7 +117,7 @@ class EmpresaModelo {
       WHEN 7 THEN 'Productos de entretenimiento y cultura' 
       ELSE ' ' END AS CATEGORY_COMPANY
       FROM company
-      WHERE ESTADO_EMPRESA = 1 ";
+      WHERE  1 = 1 ";
       
       if($this->nombre != ''){
         $sql .= " AND NAME_COMPANY LIKE '%$this->nombre%'";
