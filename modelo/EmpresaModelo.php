@@ -97,6 +97,7 @@ class EmpresaModelo {
       }
       
       $sql .=" WHERE NIT = '$this->nit'";
+      print($sql);
       $this->con->consultaSimple($sql, 0);
 
     }
