@@ -12,6 +12,7 @@ class UsuarioControlador{
   //Validar si un usuario se encuentra creado
   public function validarUsuario($data){
     $this->usuModel->set("document", $data['document']);
+    $this->usuModel->set("mail", $data['mail']);
     $datos = $this->usuModel->validarUsuario();
     $empresa = mysqli_fetch_array($datos);
     if($empresa['CANT_ID'] == 0){
