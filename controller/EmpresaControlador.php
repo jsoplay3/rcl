@@ -54,6 +54,8 @@ class EmpresaControlador{
     $this->empModel->set("descripcion", $data['description_company']);
     $this->empModel->set("categoria", $data['category_company']);
     $this->empModel->set("descripcionProd", $data['product_description']);
+    $estatus = isset($data['status_company']) == ''?0:1;
+    $this->empModel->set("status", $estatus);
     $this->empModel->insertarEmpresa();
     // echo "{mensaje:Empresa creada correctamente'}";
     echo "<script>alert('Empresa creada correctamente');

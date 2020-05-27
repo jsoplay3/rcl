@@ -161,15 +161,27 @@
                       <!-- selected="selected" -->
                       <select class="form-control" name="category_company" requires>
                           <option></option>
-                          <option value="1" <?php echo $data['CATEGORY_COMPANY'] == 1? $select='selected':''?>>Alimentos preparados para consumo inmediato</option>
-                          <option value="2" <?php echo $data['CATEGORY_COMPANY'] == 2? $select='selected':''?>>Productos para el cuidado personal</option>
-                          <option value="3" <?php echo $data['CATEGORY_COMPANY'] == 3? $select='selected':''?> >Productos de limpieza</option>
-                          <option value="4" <?php echo $data['CATEGORY_COMPANY'] == 4? $select='selected':''?>>Productos para el Hogar</option>
-                          <option value="5" <?php echo $data['CATEGORY_COMPANY'] == 5? $select='selected':''?>>Tecnología</option>
-                          <option value="6" <?php echo $data['CATEGORY_COMPANY'] == 6? $select='selected':''?>>Producto artesanales</option>
-                          <option value="7" <?php echo $data['CATEGORY_COMPANY'] == 7? $select='selected':''?>>Productos de entretenimiento y cultura</option>
-                      </select>
+                          <option value="1" <?php echo isset($data['CATEGORY_COMPANY']) == 1? $select='selected':''?>>Alimentos preparados para consumo inmediato</option>
+                          <option value="2" <?php echo isset($data['CATEGORY_COMPANY']) == 2? $select='selected':''?>>Productos para el cuidado personal</option>
+                          <option value="3" <?php echo isset($data['CATEGORY_COMPANY']) == 3? $select='selected':''?> >Productos de limpieza</option>
+                          <option value="4" <?php echo isset($data['CATEGORY_COMPANY']) == 4? $select='selected':''?>>Productos para el Hogar</option>
+                          <option value="5" <?php echo isset($data['CATEGORY_COMPANY']) == 5? $select='selected':''?>>Tecnología</option>
+                          <option value="6" <?php echo isset($data['CATEGORY_COMPANY']) == 6? $select='selected':''?>>Producto artesanales</option>
+                          <option value="7" <?php echo isset($data['CATEGORY_COMPANY']) == 7? $select='selected':''?>>Productos de entretenimiento y cultura</option>
+                      </select> 
                   </div>
+                  
+                  <?php if($_SESSION['TYPE'] == 1){?>
+                  <div class="col-md-4">
+                      <label for="status_company">Estado</label>
+                      <select class="form-control" name="status_company" requires>
+                          <option></option>
+                          <option value="0" <?php echo isset($data['ESTADO_EMPRESA']) == 0? $select='selected':''?>>Inactivo</option>
+                          <option value="1" <?php echo isset($data['ESTADO_EMPRESA']) == 1? $select='selected':$select='selected'?>>Activo</option>
+                      </select> 
+                  </div>
+                  <?php } ?>
+
                 </div>
             
                 <div class="form-group">
