@@ -12,6 +12,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="validation/validateUserSignUp.js"></script>
 </head>
 <body>
 
@@ -30,12 +31,12 @@
                     </div>
                     
                     <h3>Iniciar Sesión</h3>
-                    <form action="../controller/autenticator.php" method="post">
+                    <form action="../controller/autenticator.php" method="post" onsubmit="return validateLogin()">
                         <div class="form-group">
-                            <input name="mail" type="text" class="form-control" placeholder="Correo Electrónico *" require />
+                            <input name="mail" id="mail" type="text" class="form-control" placeholder="Correo Electrónico *" require />
                         </div>
                         <div class="form-group">
-                            <input name="pass" type="password" class="form-control" placeholder="Contraseña *" require />
+                            <input name="pass" id="pass" type="password" class="form-control" placeholder="Contraseña *" require />
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btnSubmit" value="Ingresar"/>
@@ -50,18 +51,18 @@
                 </div>
                 <div class="col-md-6 login-form-2">
                     <h3>Registrarse</h3>
-                    <form action="login.php" method="post">
+                    <form action="login.php" method="post" onsubmit="return validateUserSignUp()">
                         <div class="form-group">
-                            <input name="document" type="text" class="form-control" placeholder="Documento *" require />
+                            <input name="document" id="document" type="text" class="form-control" placeholder="Documento *" require/>
                         </div>
                         <div class="form-group">
-                            <input name="name" type="text" class="form-control" placeholder="Nombre *" require />
+                            <input name="name" id="name" type="text" class="form-control" placeholder="Nombre *" require/>
                         </div>
                         <div class="form-group">
-                            <input name="mail" type="text" class="form-control" placeholder="Mail *" require />
+                            <input name="mail" id="mail" type="text" class="form-control" placeholder="Mail *" require/>
                         </div>
                         <div class="form-group">
-                            <input name="pass" type="password" class="form-control" placeholder="Contraseña *" require />
+                            <input name="pass" id="pass" type="password" class="form-control" placeholder="Contraseña *" require/>
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btnSubmit" name="regUsuario" value="Registrarse" />

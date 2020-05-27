@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,11 +27,18 @@
   ?>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">
+      <a id="logo-container" href="index.php" class="brand-logo">
         <img src="../landing/images/logoRcl.svg" height="60px"/>
       </a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Inicio</a></li>
+        <?php
+          if (!isset ($_SESSION['uxt_codUsuario'])){
+          }
+          else{
+            echo '<li><a href="../views/adminCompany.php">Adminsitrar Empresas</a></li>';
+          }
+        ?>
         <li><a href="../views/login.php">Registrar Empresa</a></li>
       </ul>
 
@@ -128,7 +138,7 @@
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
+          <h4>Rionegro Antioquia</h4>
           <p class="left-align light">Rionegro es un municipio de Colombia, ubicado en el departamento de Antioquia. Se encuentra en el valle de San Nicolás o también llamado Altiplano del Oriente, en la subregión Oriente, siendo la población más grande, así como la que concentra el movimiento económico de la subregión. Su nombre oficial es Ciudad Santiago de Arma de Rionegro.1​ Limita al norte con los municipios de Guarne y San Vicente, por el este con los municipios de Marinilla y El Carmen de Viboral, por el sur con el municipio de La Ceja, y por el oeste con los municipios de El Retiro, Envigado y Medellín </p>
         </div>
       </div>
@@ -160,7 +170,7 @@
         <div class="col l3 s12">
           <h5 class="white-text">Alidados</h5>
           <ul>
-            <li><a class="white-text" href="#!">Alcaldía de Rionegro</a></li>
+            <li><a class="white-text" href="https://www.rionegro.gov.co/" target="_blank">Alcaldía de Rionegro</a></li>
             <li><a class="white-text" href="#!">Cámara de Comercio</a></li>
             <li><a class="white-text" href="#!">TecnoParque</a></li>
             <li><a class="white-text" href="#!">Masora</a></li>
@@ -170,9 +180,8 @@
           <h5 class="white-text">Contacto</h5>
           <ul>
             <li>Secretaría de Desarrollo Económico</li>
-            <li>Tels. 555-55-55</li>
-            <li>Url: http://www.google.com</li>
-            <li>Correo: admin@rionegro.gov.co</li>
+            <li>Tels. 5204060 | Ext 1350</li>
+            <li>Correo: emprendimiento@rionegro.gov.co</li>
           </ul>
         </div>
       </div>

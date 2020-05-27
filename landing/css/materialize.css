@@ -5693,13 +5693,13 @@ body.keyboard-focused .dropdown-content li:focus {
   background-color: rgba(0, 150, 136, 0.7);
 }
 
-.waves-effect input[type="button"], .waves-effect input[type="reset"], .waves-effect input[type="submit"] {
+/* .waves-effect input[type="button"], .waves-effect input[type="reset"], .waves-effect input[type="submit"] {
   border: 0;
   font-style: normal;
   font-size: inherit;
   text-transform: inherit;
   background: none;
-}
+} */
 
 .waves-effect img {
   position: relative;

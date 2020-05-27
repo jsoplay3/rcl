@@ -98,7 +98,7 @@
                   <?php if(!isset($data)){?>
                     <div class="col-md-4">
                     <div class="form-group">
-                        <label for="logo_url">Logo:</label><span> Medidas: 300px x 300px JPG/PNG</span>
+                        <label for="logo_url">Logo:</label><span> Medidas: 728px x 458px Formato: PNG</span>
                         <input class="form-control" type="file" name="logo_url" required/>
                         <br/>
                     </div>
@@ -180,7 +180,7 @@
                 </div>
             
                 <div class="form-group">
-                    <label for="product_description">Descripción del Producto</label>
+                    <label for="product_description">Descripción del Producto <span>Utilice etiquetas HTML si lo desea</span></label>
                     <textarea class="form-control" rows="5" name="product_description"><?php echo isset($data['PRODUCT_DESCRIPTION'])?$data['PRODUCT_DESCRIPTION']:''; ?></textarea>
                 </div>
             

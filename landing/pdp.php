@@ -30,9 +30,9 @@
 ?>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-    <img src="../landing/images/logoRcl.svg" height="60px"/>
+    <a href="index.php"><img src="../landing/images/logoRcl.svg" height="60px"/></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Inicio</a></li>
+        <li><a href="index.php">Inicio</a></li>
         <li><a href="../views/login.php">Registrar Empresa</a></li>
       </ul>
 
@@ -118,22 +118,26 @@
 
 
           <div class="row containerFormMessage">
-            
-          <form class="col s12">
+          
+          <form action="pdp.php" method="post" class="col s12">
             <div class="row">
               <span class="pdpTitleMessage">Dejar un mensaje</span>
               <div class="input-field col s12">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" class="validate">
+                <input id="icon_prefix" name="nombre" type="text" class="validate">
                 <label for="icon_prefix">Nombre</label>
               </div>
               <div class="input-field col s12">
                 <i class="material-icons prefix">mode_edit</i>
-                <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                <textarea id="icon_prefix2" name="mensaje" class="materialize-textarea"></textarea>
                 <label for="icon_prefix2">Mensaje</label>
+              </div>
+              <div class="col s12">
+                <input type="submit" class="btn styleText btnSeeMore" value="Enviar mensaje a la empresa">
               </div>
             </div>
           </form>
+          
       
         </div>
       
