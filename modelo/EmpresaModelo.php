@@ -5,7 +5,7 @@ class EmpresaModelo {
 
     private $con;
     private $id, $nit, $nombre, $direccion, $telefono, $celular, $email, $contacto,
-    $logoUrl, $webUrl, $fbUrl, $tw_url, $intUrl, $ytUrl, $descripcion, $categoria,
+    $logoUrl, $webUrl, $fbUrl, $tw_url, $intUrl, $ytUrl, $descripcion, $categoria, $status,
     $descripcionProd, $fechaCrea, $fechaModqifica, $userModifica; 
      
     public function __construct(){
@@ -27,10 +27,10 @@ class EmpresaModelo {
     public function insertarEmpresa(){
       $sql = "INSERT INTO company(NIT, NAME_COMPANY, ADDRESS_COMPAMY, PHONE_COMPANY, CEL_COMPANY, MAIL_COMPANY, 
       CONTACT_COMPANY, LOGO_URL, WEB_URL, FB_URL, TW_URL, INS_URL, YT_URL, DESCRIPTION_COMPANY, CATEGORY_COMPANY, 
-      PRODUCT_DESCRIPTION, DATE_CREATED)
+      PRODUCT_DESCRIPTION, ESTADO_EMPRESA, DATE_CREATED)
       VALUES ('$this->nit', '$this->nombre', '$this->direccion', '$this->telefono', '$this->celular', '$this->email', '$this->contacto',
       '$this->logoUrl', '$this->webUrl', '$this->fbUrl', '$this->tw_url', '$this->intUrl', '$this->ytUrl', '$this->descripcion', 
-      '$this->categoria', '$this->descripcionProd', NOW())";
+      '$this->categoria', '$this->descripcionProd', $this->status, NOW())";
       $this->con->consultaSimple($sql, 0);
     }
   
@@ -66,7 +66,7 @@ class EmpresaModelo {
     public function consultarEmpresaPorId(){
       $sql = "SELECT ID, NIT, NAME_COMPANY, ADDRESS_COMPAMY, PHONE_COMPANY, CEL_COMPANY, MAIL_COMPANY, 
       CONTACT_COMPANY, LOGO_URL, WEB_URL, FB_URL, TW_URL, INS_URL, YT_URL, DESCRIPTION_COMPANY, CATEGORY_COMPANY, 
-      PRODUCT_DESCRIPTION, DATE_CREATED, DATE_UPDATE, USER_UPDATE,
+      PRODUCT_DESCRIPTION, DATE_CREATED, DATE_UPDATE, USER_UPDATE, ESTADO_EMPRESA,
       CASE CATEGORY_COMPANY 
       WHEN 1 THEN 'Alimentos preparados para consumo inmediato' 
       WHEN 2 THEN 'Productos para el cuidado personal' 
