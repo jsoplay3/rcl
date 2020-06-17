@@ -168,6 +168,10 @@
                           <option value="5" <?php echo isset($data['CATEGORY_COMPANY']) == 5? $select='selected':''?>>Tecnología</option>
                           <option value="6" <?php echo isset($data['CATEGORY_COMPANY']) == 6? $select='selected':''?>>Producto artesanales</option>
                           <option value="7" <?php echo isset($data['CATEGORY_COMPANY']) == 7? $select='selected':''?>>Productos de entretenimiento y cultura</option>
+                          <option value="8" <?php echo isset($data['CATEGORY_COMPANY']) == 8? $select='selected':''?>>Ropa y Calzado</option>
+                          <option value="9" <?php echo isset($data['CATEGORY_COMPANY']) == 9? $select='selected':''?>>Publicidad y Medios</option>
+                          <option value="10" <?php echo isset($data['CATEGORY_COMPANY']) == 10? $select='selected':''?>>Alimentos Procesados</option>
+                          <option value="10" <?php echo isset($data['CATEGORY_COMPANY']) == 11? $select='selected':''?>>Otros</option>
                       </select> 
                   </div>
                   

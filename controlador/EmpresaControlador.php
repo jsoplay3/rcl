@@ -79,6 +79,12 @@ class EmpresaControlador{
     return $cat;
   }*/
 
+  public function consultarEmpresaLikeLanding($data){
+    $this->empModel->set("nombre", $data['nameCom']);
+    $datos = $this->empModel->consultarEmpresaLikeLanding();
+    return $datos;
+  }
+
 }
 
 

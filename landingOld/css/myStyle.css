@@ -63,7 +63,7 @@
 }
 
 .descriptionBanner{
-    text-shadow: 2px 2px 0 #000
+    text-shadow: 2px 2px 0 #000;
 }
 
 .btnBanner{
@@ -173,4 +173,12 @@
     padding: 0.5em;
     border-radius: 1em;;
 }
+
+.containerSearch{
+    background-color: rgba(240,240,240, 1);
+    padding: 1em;
+    border-radius: 1em;
+    margin-top: 1em;
+}
+
 

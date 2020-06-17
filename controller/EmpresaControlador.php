@@ -144,6 +144,12 @@ class EmpresaControlador{
     $datos = $this->empModel->consultarEmpresaLike();
     return $datos;
   }
+
+  public function consultarEmpresaLikeLanding($data){
+    $this->empModel->set("nombre", $data['nameCom']);
+    $datos = $this->empModel->consultarEmpresaLikeLanding();
+    return $datos;
+  }
 }
 
 
