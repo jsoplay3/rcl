@@ -33,6 +33,17 @@ juansebastianossadominguez@gmail.com
   <!-- Custom styles for this template -->
   <link href="css/landing-page.css" rel="stylesheet">
   <link rel="stylesheet" href="vendor/fontawesome-free/css/font-awesome.min.css">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   
 
 </head>
@@ -78,6 +89,38 @@ juansebastianossadominguez@gmail.com
 
   <!-- Masthead -->
   <header class="masthead text-white text-center">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+
+      <!-- Imagenes del Slider -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/bg_personas.jpg" alt="Personas">
+        </div>
+        <div class="carousel-item">
+          <img src="img/bg_personas.jpg" alt="Personas">
+        </div>
+        <div class="carousel-item">
+          <img src="img/bg_personas.jpg" alt="Personas">
+        </div>
+      </div>
+
+          <!-- Controles Next & Prev-->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+              <!--BOTÓN BUSCAR-->
+
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -88,7 +131,7 @@ juansebastianossadominguez@gmail.com
           <form action="index.php" method="post">
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="text" class="form-control form-control-lg" name="nameCom" placeholder="Ingresa un nombre">
+                <input type="text" class="form-control form-control-lg" name="nameCom" placeholder="Ingresa una búsqueda">
               </div>
               <div class="col-12 col-md-3">
                 <button type="submit" name="buscarEmp" value="Buscar" class="btn btn-block btn-lg btn-primary">Buscar...</button>
