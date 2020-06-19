@@ -89,44 +89,11 @@ juansebastianossadominguez@gmail.com
 
   <!-- Masthead -->
   <header class="masthead text-white text-center">
-    <div id="demo" class="carousel slide" data-ride="carousel">
-
-      <!-- Indicators -->
-      <ul class="carousel-indicators">
-        <li data-target="#demo" class="active"></li>
-        <li data-target="#demo" data-slide-to="1"></li>
-        <li data-target="#demo" data-slide-to="2"></li>
-      </ul>
-
-      <!-- Imagenes del Slider -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="img/bg_personas.jpg" alt="Personas">
-        </div>
-        <div class="carousel-item">
-          <img src="img/bg_personas.jpg" alt="Personas">
-        </div>
-        <div class="carousel-item">
-          <img src="img/bg_personas.jpg" alt="Personas">
-        </div>
-      </div>
-
-          <!-- Controles Next & Prev-->
-      <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
-    </div>
               <!--BOTÓN BUSCAR-->
 
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5">.</h1>
-        </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
           <form action="index.php" method="post">
             <div class="form-row">
@@ -148,6 +115,39 @@ juansebastianossadominguez@gmail.com
         </div>
       </div>
     </div>
+            <!--TERMINA BOTON BUSCAR-->
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+<!-- Indicators -->
+<ul class="carousel-indicators">
+  <li data-target="#demo" data-slide-to="0" class="active"></li>
+  <li data-target="#demo" data-slide-to="1"></li>
+  <li data-target="#demo" data-slide-to="2"></li>
+</ul>
+
+<!-- The slideshow -->
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <img src="img/bg_personas.jpg" alt="Los Angeles">
+  </div>
+  <div class="carousel-item">
+    <img src="img/banner_rionegro1.jpg" alt="Chicago">
+  </div>
+  <div class="carousel-item">
+    <img src="img/bg_personas.jpg" alt="New York">
+  </div>
+</div>
+
+<!-- Left and right controls -->
+<a class="carousel-control-prev" href="#demo" data-slide="prev">
+  <span class="carousel-control-prev-icon"></span>
+</a>
+<a class="carousel-control-next" href="#demo" data-slide="next">
+  <span class="carousel-control-next-icon"></span>
+</a>
+
+</div>
+            
   </header>
 
   <!-- Icons Grid -->
