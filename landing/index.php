@@ -82,26 +82,17 @@ juansebastianossadominguez@gmail.com
           ?>
           </div>
         </div>
-      </div>
-      
-    </div>
-  </nav>
+        <!-- COMIENZA BOTÓN BUSCAR-->
 
-  <!-- Masthead -->
-  <header class="masthead text-white text-center">
-              <!--BOTÓN BUSCAR-->
-
-    <div class="overlay"></div>
-    <div class="container">
       <div class="row">
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
           <form action="index.php" method="post">
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="text" class="form-control form-control-lg" name="nameCom" placeholder="Ingresa una búsqueda">
+                <input type="text" class="form-control form-control-md" name="nameCom" placeholder="Búsqueda">
               </div>
               <div class="col-12 col-md-3">
-                <button type="submit" name="buscarEmp" value="Buscar" class="btn btn-block btn-lg btn-primary">Buscar...</button>
+                <button type="submit" name="buscarEmp" value="Buscar" class="btn btn-block btn-md btn-primary fa fa-search"></button>
               </div>
             </div>
           </form>
@@ -114,8 +105,15 @@ juansebastianossadominguez@gmail.com
 
         </div>
       </div>
-    </div>
             <!--TERMINA BOTON BUSCAR-->
+      </div>
+      
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead text-white text-center">
+              
   <div id="demo" class="carousel slide" data-ride="carousel">
 
 <!-- Indicators -->
@@ -128,13 +126,13 @@ juansebastianossadominguez@gmail.com
 <!-- The slideshow -->
 <div class="carousel-inner">
   <div class="carousel-item active">
-    <img src="img/bg_personas.jpg" alt="Los Angeles">
+    <img src="img/bg_personas.jpg" alt="Personas">
   </div>
   <div class="carousel-item">
-    <img src="img/banner_rionegro1.jpg" alt="Chicago">
+    <img src="img/banner_rionegro1.jpg" alt="Rionegro">
   </div>
   <div class="carousel-item">
-    <img src="img/bg_personas.jpg" alt="New York">
+    <img src="img/bg_personas.jpg" alt="Personas">
   </div>
 </div>
 
