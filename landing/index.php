@@ -91,7 +91,7 @@ juansebastianossadominguez@gmail.com
                       <input type="text" class="form-control form-control-lg" name="nameCom" placeholder="Búsqueda">
                     </div>
                     <div class="col-12 col-md-3">
-                      <button type="submit" name="buscarEmp" value="Buscar" class="btn btn-block btn-lg fa fa-search" style="font-size:25px;color:blue;"></button>
+                      <button type="submit" name="buscarEmp" value="Buscar" class="btn btn-block btn-lg fa fa-search" style="font-size:25px;color:#0069D9;"></button>
                     </div>
                 </div>
             </form>
