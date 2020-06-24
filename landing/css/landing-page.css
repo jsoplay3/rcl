@@ -177,16 +177,25 @@ footer.footer {
 
 .containerMenu{
   display: flex;
-  width: 40%;
+  width: 60%;
   float: left;
   justify-content: flex-end;
   align-items: center;
 }
 
 .btnMenu{
-  margin-right: 2em;
+  margin-right: -5em;
+  margin-left: 2em;
 }
 
+.form-inline{
+  margin-right: -2em;
+  margin-left: 10em;
+}
+
+.fa .fa-search{
+  font-size:48px;color:red;
+}
 
 @media (max-width: 768px) {
   .containerHeader{
@@ -201,10 +210,10 @@ footer.footer {
   }
   .containerMenu{
     justify-content: center;
-    width: 100%;
+    width: 90%;
   }
   .containerMenu a{
-    width: 100%;
+    width: 90%;
   }
   .logo{
     width: 100%;

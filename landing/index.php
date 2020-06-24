@@ -55,98 +55,94 @@ juansebastianossadominguez@gmail.com
     $empresa = new EmpresaControlador();
   ?>
 
-  <!-- Navigation -->
+  <!-- Comienza Barra de Navegación -->
   <nav class="navbar navbar-light bg-light static-top">
     <div class="container">
       <div class="containerHeader">
         <div class="containerLogo">
-        <div class="logo">
-            <a href="index.php"><img src="img/logoRcl.svg" height="60px"/></a>
-          </div>
           <div class="logo">
-            <a href="https://www.rionegro.gov.co/" target="_blank"><img src="img/LogoAlcaldia-01.svg" height="60px"/></a>
-          </div>
-        </div>
-        <div class="containerMenu">
-          <div class="btnMenu">
-            <a href="https://docs.google.com/forms/d/1fxN0ZdjTab2kzPGjAYmITezZR3rUuwP0HHKuK7Xs64c/edit" target="_blank" class="btn btn-primary" >Registrar Empresa</a>
-          </div>
-          <div class="btnMenu">
-          <?php
-            if (!isset ($_SESSION['uxt_codUsuario'])){
-              echo '<a href="../views/login.php" class="btn btn-primary" >Iniciar Sesión</a>';
-            }
-            else{
-              echo '<a href="../views/login.php" class="btn btn-primary" >Administrar Empresas</a>';
-            }
-          ?>
-          </div>
-        </div>
-        <!-- COMIENZA BOTÓN BUSCAR-->
-
-      <div class="row">
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form action="index.php" method="post">
-            <div class="form-row">
-              <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="text" class="form-control form-control-md" name="nameCom" placeholder="Búsqueda">
-              </div>
-              <div class="col-12 col-md-3">
-                <button type="submit" name="buscarEmp" value="Buscar" class="btn btn-block btn-md btn-primary fa fa-search"></button>
-              </div>
+              <a href="index.php"><img src="img/logoRcl.svg" height="60px"/></a>
             </div>
-          </form>
-
+            <div class="logo">
+              <a href="https://www.rionegro.gov.co/" target="_blank"><img src="img/LogoAlcaldia-01.svg" height="60px"/></a>
+            </div>
+            <div class="container">
+              <div class="btnMenu">
+                <a href="https://docs.google.com/forms/d/1fxN0ZdjTab2kzPGjAYmITezZR3rUuwP0HHKuK7Xs64c/edit" target="_blank" class="btn btn-primary" >Registrar Empresa</a>
+              </div>
+              <div class="btnMenu">
+                <?php
+                  if (!isset ($_SESSION['uxt_codUsuario'])){
+                    echo '<a href="../views/login.php" class="btn btn-primary" >Iniciar Sesión</a>';
+                  }
+                  else{
+                    echo '<a href="../views/login.php" class="btn btn-primary" >Administrar Empresas</a>';
+                  }
+                ?>
+              </div>
+          </div>
+        </div>
+        
+            <!-- COMIENZA BOTÓN BUSCAR-->
+        <div class="row">
+            <form class="form-inline" action="index.php" method="post">
+                <div class="form-row">
+                    <div class="col-12 col-md-9 mb-2 mb-md-0">
+                      <input type="text" class="form-control form-control-lg" name="nameCom" placeholder="Búsqueda">
+                    </div>
+                    <div class="col-12 col-md-3">
+                      <button type="submit" name="buscarEmp" value="Buscar" class="btn btn-block btn-lg fa fa-search" style="font-size:25px;color:blue;"></button>
+                    </div>
+                </div>
+            </form>
           <?php
             if(isset($_POST['buscarEmp']) == 'Buscar'){
               $filtCom = $empresa->consultarEmpresaLikeLanding($_POST);
             }
           ?>
-
-        </div>
-      </div>
             <!--TERMINA BOTON BUSCAR-->
+        </div>   
       </div>
-      
     </div>
   </nav>
 
+  <!--Termina barra de Navegación-->
+
+            <!--COMIENZA CAROUSEL-->
   <!-- Masthead -->
-  <header class="masthead text-white text-center">
-              
-  <div id="demo" class="carousel slide" data-ride="carousel">
+  <header class="masthead text-white text-center">       
+    <div id="demo" class="carousel slide" data-ride="carousel">
 
-<!-- Indicators -->
-<ul class="carousel-indicators">
-  <li data-target="#demo" data-slide-to="0" class="active"></li>
-  <li data-target="#demo" data-slide-to="1"></li>
-  <li data-target="#demo" data-slide-to="2"></li>
-</ul>
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
 
-<!-- The slideshow -->
-<div class="carousel-inner">
-  <div class="carousel-item active">
-    <img src="img/bg_personas.jpg" alt="Personas">
-  </div>
-  <div class="carousel-item">
-    <img src="img/banner_rionegro1.jpg" alt="Rionegro">
-  </div>
-  <div class="carousel-item">
-    <img src="img/bg_personas.jpg" alt="Personas">
-  </div>
-</div>
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/bg_personas.jpg" alt="Personas">
+        </div>
+        <div class="carousel-item">
+          <img src="img/banner_rionegro1.jpg" alt="Rionegro">
+        </div>
+        <div class="carousel-item">
+          <img src="img/bg_personas.jpg" alt="Personas">
+        </div>
+      </div>
 
-<!-- Left and right controls -->
-<a class="carousel-control-prev" href="#demo" data-slide="prev">
-  <span class="carousel-control-prev-icon"></span>
-</a>
-<a class="carousel-control-next" href="#demo" data-slide="next">
-  <span class="carousel-control-next-icon"></span>
-</a>
-
-</div>
-            
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>         
   </header>
+              <!--TERMINA CAROUSEL-->
 
   <!-- Icons Grid -->
   <section class="features-icons bg-light text-center">
