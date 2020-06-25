@@ -157,22 +157,44 @@
             
                   <div class="col-md-4">
                       <label for="category_company">Sector Económico</label>
-                      <?php // isset($data['CATEGORY_COMPANY'])?$data['CATEGORY_COMPANY']:''; ?> 
-                      <!-- selected="selected" -->
+                      <?php 
+                      if(isset($data['CATEGORY_COMPANY'])){
+                        $var = "selected='selected'";
+                      
+                      $selected = 'selected="selected"'?>
                       <select class="form-control" name="category_company" requires>
                           <option></option>
-                          <option value="1" <?php echo isset($data['CATEGORY_COMPANY']) == 1? $select='selected':''?>>Alimentos preparados para consumo inmediato</option>
-                          <option value="2" <?php echo isset($data['CATEGORY_COMPANY']) == 2? $select='selected':''?>>Productos para el cuidado personal</option>
-                          <option value="3" <?php echo isset($data['CATEGORY_COMPANY']) == 3? $select='selected':''?> >Productos de limpieza</option>
-                          <option value="4" <?php echo isset($data['CATEGORY_COMPANY']) == 4? $select='selected':''?>>Productos para el Hogar</option>
-                          <option value="5" <?php echo isset($data['CATEGORY_COMPANY']) == 5? $select='selected':''?>>Tecnología</option>
-                          <option value="6" <?php echo isset($data['CATEGORY_COMPANY']) == 6? $select='selected':''?>>Producto artesanales</option>
-                          <option value="7" <?php echo isset($data['CATEGORY_COMPANY']) == 7? $select='selected':''?>>Productos de entretenimiento y cultura</option>
-                          <option value="8" <?php echo isset($data['CATEGORY_COMPANY']) == 8? $select='selected':''?>>Ropa y Calzado</option>
-                          <option value="9" <?php echo isset($data['CATEGORY_COMPANY']) == 9? $select='selected':''?>>Publicidad y Medios</option>
-                          <option value="10" <?php echo isset($data['CATEGORY_COMPANY']) == 10? $select='selected':''?>>Alimentos Procesados</option>
-                          <option value="10" <?php echo isset($data['CATEGORY_COMPANY']) == 11? $select='selected':''?>>Otros</option>
+                          <option value="1" <?php echo $data['CATEGORY_COMPANY'] == 1 ? $var:''?>>Alimentos preparados para consumo inmediato</option>
+                          <option value="2" <?php echo $data['CATEGORY_COMPANY'] == 2 ? $var:''?>>Productos para el cuidado personal</option>
+                          <option value="3" <?php echo $data['CATEGORY_COMPANY'] == 3 ? $var:''?> >Productos de limpieza</option>
+                          <option value="4" <?php echo $data['CATEGORY_COMPANY'] == 4 ? $var:''?>>Productos para el Hogar</option>
+                          <option value="5" <?php echo $data['CATEGORY_COMPANY'] == 5 ? $var:''?>>Tecnología</option>
+                          <option value="6" <?php echo $data['CATEGORY_COMPANY'] == 6 ? $var:''?>>Producto artesanales</option>
+                          <option value="7" <?php echo $data['CATEGORY_COMPANY'] == 7 ? $var:''?>>Productos de entretenimiento y cultura</option>
+                          <option value="8" <?php echo $data['CATEGORY_COMPANY'] == 8 ? $var:''?>>Ropa y Calzado</option>
+                          <option value="9" <?php echo $data['CATEGORY_COMPANY'] == 9 ? $var:''?>>Publicidad y Medios</option>
+                          <option value="10" <?php echo $data['CATEGORY_COMPANY'] == 10 ? $var:''?>>Alimentos Procesados</option>
+                          <option value="10" <?php echo $data['CATEGORY_COMPANY'] == 11 ? $var:''?>>Otros</option>
                       </select> 
+                      <?php
+                      } else { ?>
+                      <select class="form-control" name="category_company" requires>
+                          <option></option>
+                          <option value="1">Alimentos preparados para consumo inmediato</option>
+                          <option value="2">Productos para el cuidado personal</option>
+                          <option value="3">Productos de limpieza</option>
+                          <option value="4">Productos para el Hogar</option>
+                          <option value="5">Tecnología</option>
+                          <option value="6">Producto artesanales</option>
+                          <option value="7">Productos de entretenimiento y cultura</option>
+                          <option value="8">Ropa y Calzado</option>
+                          <option value="9">Publicidad y Medios</option>
+                          <option value="10">Alimentos Procesados</option>
+                          <option value="10">Otros</option>
+                      </select>     
+                      <?php
+                      }
+                      ?>
                   </div>
                   
                   <?php if($_SESSION['TYPE'] == 1){?>

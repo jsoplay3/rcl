@@ -97,9 +97,13 @@ juansebastianossadominguez@gmail.com
           </form>
 
           <?php
-            if(isset($_POST['buscarEmp']) == 'Buscar'){
-              $filtCom = $empresa->consultarEmpresaLikeLanding($_POST);
-            }
+              if(isset($_POST['buscarEmp']) == 'Buscar'){
+                $nombre = $_POST['nameCom'];
+                $filtCom = $empresa->consultarEmpresaLikeLanding($nombre);
+              } else {
+                $nombre = "";
+                $filtCom = $empresa->consultarEmpresaLikeLanding($nombre);
+              }
           ?>
 
         </div>
