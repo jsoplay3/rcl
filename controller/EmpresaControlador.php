@@ -105,6 +105,7 @@ class EmpresaControlador{
   public function actualizarEmpresa($data){
 
     if($_FILES['logo_url']['size'] > 0){
+      echo "llego alguna cosita";
       $nombreLogo = self::almacenarImgLogo($data);
       $this->empModel->set('logoUrl', $nombreLogo);
     }
@@ -146,7 +147,7 @@ class EmpresaControlador{
   }
 
   public function consultarEmpresaLikeLanding($data){
-    $this->empModel->set("nombre", $data['nameCom']);
+    $this->empModel->set("nombre", $data);
     $datos = $this->empModel->consultarEmpresaLikeLanding();
     return $datos;
   }

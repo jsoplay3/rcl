@@ -121,11 +121,15 @@ juansebastianossadominguez@gmail.com
               </div>
             </div>
           </form>
-        </div>         
-<?php
-            if(isset($_POST['buscarEmp']) == 'Buscar'){
-              $filtCom = $empresa->consultarEmpresaLikeLanding($_POST);
-            }
+
+          <?php
+              if(isset($_POST['buscarEmp']) == 'Buscar'){
+                $nombre = $_POST['nameCom'];
+                $filtCom = $empresa->consultarEmpresaLikeLanding($nombre);
+              } else {
+                $nombre = "";
+                $filtCom = $empresa->consultarEmpresaLikeLanding($nombre);
+              }
           ?>
   <!-- Icons Grid -->
   <section class="features-icons bg-light text-center">

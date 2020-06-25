@@ -83,7 +83,7 @@ class EmpresaModelo {
     }
 
   
-    public function actualizarEmpresa(){
+    public function actualizarEmpresa(){  
       $sql = "";
       $sql .= "UPDATE company 
       SET NAME_COMPANY='$this->nombre', ADDRESS_COMPAMY='$this->direccion', PHONE_COMPANY='$this->telefono', CEL_COMPANY='$this->celular', 
@@ -97,7 +97,8 @@ class EmpresaModelo {
       }
       
       $sql .=" WHERE NIT = '$this->nit'";
-      print($sql);
+      //print($sql);
+      
       $this->con->consultaSimple($sql, 0);
 
     }
@@ -159,9 +160,10 @@ class EmpresaModelo {
       if($this->nombre != ''){
         $sql .= " AND NAME_COMPANY LIKE '%$this->nombre%'";
       }
-      
       $datos = $this->con->consultaRetorno($sql);
       return $datos;
+      
+      
     }
   }
 
