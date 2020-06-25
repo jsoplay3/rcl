@@ -34,8 +34,8 @@ header.masthead {
 
 @media(max-width: 768px){
   .carousel-inner img{
-    width: 80%;
-    height: 20%;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -80,7 +80,6 @@ header.masthead h1 {
   .showcase .showcase-text {
     padding: 7rem;
   }
-}
 
 .features-icons {
   padding-top: 2rem;
@@ -192,9 +191,6 @@ footer.footer {
   margin-right: -2em;
   margin-left: 10em;
 }
-
-.fa .fa-search{
-  font-size:48px;color:red;
 }
 
 @media (max-width: 768px) {

@@ -87,11 +87,11 @@ juansebastianossadominguez@gmail.com
         <div class="row">
             <form class="form-inline" action="index.php" method="post">
                 <div class="form-row">
-                    <div class="col-12 col-md-9 mb-2 mb-md-0">
-                      <input type="text" class="form-control form-control-lg" name="nameCom" placeholder="Búsqueda">
+                    <div class="col-12 col-md-8 mb-2 mb-md-0">
+                      <input type="text" class="form-control form-control-md" name="nameCom" placeholder="Búsqueda">
                     </div>
                     <div class="col-12 col-md-3">
-                      <button type="submit" name="buscarEmp" value="Buscar" class="btn btn-block btn-lg fa fa-search" style="font-size:25px;color:#0069D9;"></button>
+                      <button type="submit" name="buscarEmp" value="Buscar" class="btn btn-block btn-lg fa fa-search" style="font-size:20px;color:#0069D9;"></button>
                     </div>
                 </div>
             </form>
