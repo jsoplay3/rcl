@@ -37,6 +37,11 @@ header.masthead {
     width: 100%;
     height: auto;
   }
+
+  .flex-container div {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
 }
 
 header.masthead .overlay {
@@ -65,6 +70,7 @@ header.masthead h1 {
   header.masthead h1 {
     font-size: 3rem;
   }
+  
 }
 
 .showcase .showcase-text {
@@ -181,7 +187,6 @@ footer.footer {
   justify-content: flex-end;
   align-items: center;
 }
-
 .btnMenu{
   margin-right: -5em;
   margin-left: 2em;
@@ -198,6 +203,11 @@ footer.footer {
     justify-content: center;
     width: 100%;
     flex-wrap: wrap;
+  }
+
+  .flex-row{
+    margin-right: 10%;
+    margin-left: 10%;
   }
   .containerLogo{
     width: 100%;
@@ -223,5 +233,4 @@ footer.footer {
     justify-content: center;
   }
 
-  
 }
