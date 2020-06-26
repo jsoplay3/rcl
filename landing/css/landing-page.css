@@ -248,7 +248,7 @@ footer.footer {
 }
 
 /*Comienza Min Width para el Responsive de NavBar*/
-@media(max-width: 600px){
+@media(max-width: 900px){
   .flex-container div {
     margin-left: 20px;
     margin-right: 20px;
