@@ -255,10 +255,10 @@ footer.footer {
   }
 
   .flex-container input{
-    margin-top: 10%;
+    margin-top: 10px;
     margin-bottom: -12%;
     margin-left: 2%;
-    margin-right: -10%;
+    margin-right: -10px;
   }
 
     .flex-container button{
