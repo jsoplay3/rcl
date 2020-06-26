@@ -66,7 +66,7 @@ juansebastianossadominguez@gmail.com
             <div class="logo">
               <a href="https://www.rionegro.gov.co/" target="_blank"><img src="img/LogoAlcaldia-01.svg" height="60px"/></a>
             </div>
-            <div class="container flex-container">
+            <div class="container">
               <div class="btnMenu">
                 <a href="https://docs.google.com/forms/d/1fxN0ZdjTab2kzPGjAYmITezZR3rUuwP0HHKuK7Xs64c/edit" target="_blank" class="btn btn-primary" >Registrar Empresa</a>
               </div>
@@ -83,9 +83,9 @@ juansebastianossadominguez@gmail.com
           </div>
         </div>
         
-            <!-- COMIENZA BOTÓN BUSCAR
+            <!-- COMIENZA BOTÓN BUSCAR-->
         <div class="row">
-            <form class="form-inline flex-container2" action="index.php" method="post">
+            <form class="form-inline flex-container" action="index.php" method="post">
                 <div class="form-row">
                     <div class="col-12 col-md-8 mb-2 mb-md-0">
                       <input type="text" class="form-control form-control-md" name="nameCom" placeholder="Búsqueda">

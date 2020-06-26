@@ -42,6 +42,19 @@ header.masthead {
     margin-left: 35px;
     margin-right: 35px;
   }
+
+  .flex-container input{
+    margin-top: 10px;
+    margin-bottom: -12%;
+    margin-left: -5%;
+  }
+
+    .flex-container button{
+      margin-top: 2px;
+      margin-bottom: 0;
+      margin-left: 50%;
+      margin-right: 0;
+  }
 }
 
 header.masthead .overlay {
