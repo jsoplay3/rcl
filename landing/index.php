@@ -66,7 +66,7 @@ juansebastianossadominguez@gmail.com
             <div class="logo">
               <a href="https://www.rionegro.gov.co/" target="_blank"><img src="img/LogoAlcaldia-01.svg" height="60px"/></a>
             </div>
-            <div class="container">
+            <div class="container flex-container">
               <div class="btnMenu">
                 <a href="https://docs.google.com/forms/d/1fxN0ZdjTab2kzPGjAYmITezZR3rUuwP0HHKuK7Xs64c/edit" target="_blank" class="btn btn-primary" >Registrar Empresa</a>
               </div>

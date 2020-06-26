@@ -38,7 +38,7 @@ header.masthead {
     height: auto;
   }
 
-  .flex-container div {
+  /*.flex-container div {
     margin-left: 35px;
     margin-right: 35px;
   }
@@ -54,7 +54,7 @@ header.masthead {
       margin-bottom: 0;
       margin-left: 50%;
       margin-right: 0;
-  }
+  }*/
 }
 
 header.masthead .overlay {
@@ -245,5 +245,27 @@ footer.footer {
     height: 60px;
     justify-content: center;
   }
-
 }
+
+/*Comienza Min Width para el Responsive de NavBar*/
+@media(max-width: 600px){
+  .flex-container div {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .flex-container input{
+    margin-top: 10%;
+    margin-bottom: -12%;
+    margin-left: 2%;
+    margin-right: -10%;
+  }
+
+    .flex-container button{
+      margin-top: -4px;
+      margin-bottom: 0;
+      margin-left: 55%;
+      margin-right: 0;
+  }
+}
+/*Termina Min Width para el Responsive de NavBar*/
