@@ -70,13 +70,13 @@ juansebastianossadominguez@gmail.com
 
                           <!-- COMIENZA BOTÓN BUSCAR-->
                       <div class="row">
-                          <form class="" action="index.php" method="post">
+                          <form action="index.php" method="post">
                               <div class="form-row">
                                   <div class="col-12 col-md-8 mb-2 mb-md-0">
-                                    <input type="text" class="form-control form-control-md" name="nameCom" placeholder="Búsqueda">
+                                    <input type="text" class="form-control-busqueda" name="nameCom" placeholder="Búsqueda">
                                   </div>
-                                  <div class="col-12 col-md-3">
-                                    <button type="submit" name="buscarEmp" value="Buscar" class="btn btn-block btn-lg fa fa-search" style="font-size:20px;color:#0069D9;"></button>
+                                  <div class="col-16 col-md-3">
+                                    <button type="submit" name="buscarEmp" value="Buscar" class="buscar btn btn-block btn-lg fa fa-search" style="font-size:20px;color:#0069D9;"></button>
                                   </div>
                               </div>
                           </form>
