@@ -68,7 +68,7 @@ button.buscar{
 @media(max-width: 630px){
   input.form-control-busqueda {
       display: block;
-      width: 50%;
+      width: 55%;
       height: calc(1.5em + .75rem + 2px);
       padding: .375rem .75rem;
       font-size: 1rem;
@@ -84,8 +84,8 @@ button.buscar{
 
   button.buscar{
     margin-top: -50px;
-    padding-left: 186px;
-    padding-right: 147px;
+    padding-left: 216px;
+    padding-right: 137px;
   }
   .form-inline{
     margin-top: -70px;
@@ -96,7 +96,7 @@ button.buscar{
 
   .btnMenu1{
     padding-top: 80px;
-    margin-left: -450px;
+    margin-left: -430px;
     padding-right: 50px;
   }
   .btnMenu2{
@@ -104,6 +104,12 @@ button.buscar{
     margin-left: -20px;
     /*margin-right: -90%;*/
   }
+  .logo1{
+  margin-left: 15%;
+  }
+  .logo2{
+    margin-left: 6%;
+}
 }
 /*TERMINZA NAVBAR*/
 

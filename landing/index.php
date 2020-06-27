@@ -60,10 +60,10 @@ juansebastianossadominguez@gmail.com
     <div class="container">
       <div class="containerHeader">
         <div class="containerLogo">
-          <div class="logo">
+          <div class="logo1">
               <a href="index.php"><img src="img/logoRcl.svg" height="60px"/></a>
             </div>
-            <div class="logo">
+            <div class="logo2">
               <a href="https://www.rionegro.gov.co/" target="_blank"><img src="img/LogoAlcaldia-01.svg" height="60px"/></a>
             </div>
             <div class="container flex-container">
