@@ -44,7 +44,7 @@ juansebastianossadominguez@gmail.com
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  
+
 
 </head>
 
@@ -67,41 +67,43 @@ juansebastianossadominguez@gmail.com
               <a href="https://www.rionegro.gov.co/" target="_blank"><img src="img/LogoAlcaldia-01.svg" height="60px"/></a>
             </div>
             <div class="container flex-container">
-              <div class="btnMenu">
-                <a href="https://docs.google.com/forms/d/1fxN0ZdjTab2kzPGjAYmITezZR3rUuwP0HHKuK7Xs64c/edit" target="_blank" class="btn btn-primary" >Registrar Empresa</a>
-              </div>
-              <div class="btnMenu">
-                <?php
-                  if (!isset ($_SESSION['uxt_codUsuario'])){
-                    echo '<a href="../views/login.php" class="btn btn-primary" >Iniciar Sesión</a>';
-                  }
-                  else{
-                    echo '<a href="../views/login.php" class="btn btn-primary" >Administrar Empresas</a>';
-                  }
-                ?>
-              </div>
+
+                          <!-- COMIENZA BOTÓN BUSCAR-->
+                      <div class="row">
+                          <form class="" action="index.php" method="post">
+                              <div class="form-row">
+                                  <div class="col-12 col-md-8 mb-2 mb-md-0">
+                                    <input type="text" class="form-control form-control-md" name="nameCom" placeholder="Búsqueda">
+                                  </div>
+                                  <div class="col-12 col-md-3">
+                                    <button type="submit" name="buscarEmp" value="Buscar" class="btn btn-block btn-lg fa fa-search" style="font-size:20px;color:#0069D9;"></button>
+                                  </div>
+                              </div>
+                          </form>
+                        <?php
+                          if(isset($_POST['buscarEmp']) == 'Buscar'){
+                            $filtCom = $empresa->consultarEmpresaLikeLanding($_POST);
+                          }
+                        ?>
+                      </div>
+                          <!--TERMINA BOTON BUSCAR-->
+                      <div class="flex-container form-inline">
+                        <div class="btnMenu1">
+                          <a href="https://docs.google.com/forms/d/1fxN0ZdjTab2kzPGjAYmITezZR3rUuwP0HHKuK7Xs64c/edit" target="_blank" class="btn btn-primary" >Registrar Empresa</a>
+                        </div>
+                        <div class="btnMenu2">
+                          <?php
+                            if (!isset ($_SESSION['uxt_codUsuario'])){
+                              echo '<a href="../views/login.php" class="btn btn-primary" >Iniciar Sesión</a>';
+                            }
+                            else{
+                              echo '<a href="../views/login.php" class="btn btn-primary btnMenu2" >Administrar Empresas</a>';
+                            }
+                          ?>
+                        </div>
+                      </div>
           </div>
         </div>
-        
-            <!-- COMIENZA BOTÓN BUSCAR-->
-        <div class="row">
-            <form class="form-inline flex-container" action="index.php" method="post">
-                <div class="form-row">
-                    <div class="col-12 col-md-8 mb-2 mb-md-0">
-                      <input type="text" class="form-control form-control-md" name="nameCom" placeholder="Búsqueda">
-                    </div>
-                    <div class="col-12 col-md-3">
-                      <button type="submit" name="buscarEmp" value="Buscar" class="btn btn-block btn-lg fa fa-search" style="font-size:20px;color:#0069D9;"></button>
-                    </div>
-                </div>
-            </form>
-          <?php
-            if(isset($_POST['buscarEmp']) == 'Buscar'){
-              $filtCom = $empresa->consultarEmpresaLikeLanding($_POST);
-            }
-          ?>
-            <!--TERMINA BOTON BUSCAR-->
-        </div>   
       </div>
     </div>
   </nav>
@@ -110,7 +112,7 @@ juansebastianossadominguez@gmail.com
 
             <!--COMIENZA CAROUSEL-->
   <!-- Masthead -->
-  <header class="masthead text-white text-center">       
+  <header class="masthead text-white text-center">
     <div id="demo" class="carousel slide" data-ride="carousel">
 
       <!-- Indicators -->
@@ -140,7 +142,7 @@ juansebastianossadominguez@gmail.com
       <a class="carousel-control-next" href="#demo" data-slide="next">
         <span class="carousel-control-next-icon"></span>
       </a>
-    </div>         
+    </div>
   </header>
               <!--TERMINA CAROUSEL-->
 
@@ -148,17 +150,17 @@ juansebastianossadominguez@gmail.com
   <section class="features-icons bg-light text-center">
     <div class="container">
       <div class="row">
-        
+
       <?php
 
         if(isset($filtCom) == ""){
-      
+
           $emp = $empresa->consultarEmpresa();
           foreach ($emp as $key) {
           echo '
 
             <div class="col-lg-4 pb-4">
-              
+
               <!-- Card -->
                 <div class="card booking-card">
 
@@ -193,7 +195,7 @@ juansebastianossadominguez@gmail.com
                     <div class="containerDescription">
                     <p class="card-text">'.$key['DESCRIPTION_COMPANY'].'</p>
                     </div>
-                    
+
                     <hr class="my-4">
                     <p class="lead blue"><strong>Siguenos en nuestras redes</strong></p>
                     <ul class="list-unstyled list-inline d-flex justify-content-between mb-0">
@@ -213,7 +215,7 @@ juansebastianossadominguez@gmail.com
                         </a>
                       </li>
                       <li class="list-inline-item mr-0">
-                        <a href="'.$key['YT_URL'].'" target="_blank" alt="Visita nuestro canal en Youtube">  
+                        <a href="'.$key['YT_URL'].'" target="_blank" alt="Visita nuestro canal en Youtube">
                           <i class="fa fa-youtube-play fa-lg text-muted float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" title="Visita nuestro canal en Youtube"></i>
                         </a>
                       </li>
@@ -223,7 +225,7 @@ juansebastianossadominguez@gmail.com
                       <input type="hidden" value="'.$key['ID'].'" name="idCompany"/>
                       <input type="submit" class="btn btn-outline-secondary btn-lg btn-block deep-purple-text p-2 m-2 mx-0 mb-0 mt-3" value="Ver toda la información">
                     </form>
-                    
+
 
                   </div>
 
@@ -238,12 +240,12 @@ juansebastianossadominguez@gmail.com
         } else {
           foreach ($filtCom as $key) {
             echo '
-  
+
               <div class="col-lg-4 pb-4">
-                
+
                 <!-- Card -->
                   <div class="card booking-card">
-  
+
                     <!-- Card image -->
                     <div class="view overlay">
                       <img class="card-img-top" src="../utils/img_logo_coompanies/'.$key['LOGO_URL'].'" alt="Card image cap">
@@ -251,10 +253,10 @@ juansebastianossadominguez@gmail.com
                         <div class="mask rgba-white-slight"></div>
                       </a>
                     </div>
-  
+
                     <!-- Card content -->
                     <div class="card-body">
-  
+
                       <!-- Title -->
                       <div class="containerEllipsis">
                         <h4 class="card-title font-weight-bold"><a>'.$key['NAME_COMPANY'].'</a></h4>
@@ -275,7 +277,7 @@ juansebastianossadominguez@gmail.com
                       <div class="containerDescription">
                       <p class="card-text">'.$key['DESCRIPTION_COMPANY'].'</p>
                       </div>
-                      
+
                       <hr class="my-4">
                       <p class="lead blue"><strong>Siguenos en nuestras redes</strong></p>
                       <ul class="list-unstyled list-inline d-flex justify-content-between mb-0">
@@ -295,7 +297,7 @@ juansebastianossadominguez@gmail.com
                           </a>
                         </li>
                         <li class="list-inline-item mr-0">
-                          <a href="'.$key['YT_URL'].'" target="_blank" alt="Visita nuestro canal en Youtube">  
+                          <a href="'.$key['YT_URL'].'" target="_blank" alt="Visita nuestro canal en Youtube">
                             <i class="fa fa-youtube-play fa-lg text-muted float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" title="Visita nuestro canal en Youtube"></i>
                           </a>
                         </li>
@@ -305,19 +307,19 @@ juansebastianossadominguez@gmail.com
                         <input type="hidden" value="'.$key['ID'].'" name="idCompany"/>
                         <input type="submit" class="btn btn-outline-secondary btn-lg btn-block deep-purple-text p-2 m-2 mx-0 mb-0 mt-3" value="Ver toda la información">
                       </form>
-                      
-  
+
+
                     </div>
-  
+
                   </div>
                   <!-- Card -->
-  
-  
-  
+
+
+
               </div>
               ';
             }
-        } 
+        }
       ?>
       </div>
     </div>
@@ -351,9 +353,9 @@ juansebastianossadominguez@gmail.com
     </div>
   </section>
 
-  
 
-  
+
+
 
   <!-- Footer -->
   <footer class="footer bg-light">
@@ -361,7 +363,7 @@ juansebastianossadominguez@gmail.com
       <div class="row">
         <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
           <ul class="list-inline mb-2">
-            
+
             <li class="list-inline-item blue">
                   <div class="containerLogo">
                   <div class="logo">
@@ -373,9 +375,9 @@ juansebastianossadominguez@gmail.com
                 </div>
             </li>
             <li class="list-inline-item">&sdot;</li>
-            
-            
-            
+
+
+
           </ul>
           <p class="text-muted small mb-4 mb-lg-0">&copy; Todos los Derechos Reservados - Citelligence</p>
         </div>

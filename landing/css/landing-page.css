@@ -83,7 +83,7 @@ header.masthead h1 {
   header.masthead h1 {
     font-size: 3rem;
   }
-  
+
 }
 
 .showcase .showcase-text {
@@ -201,14 +201,25 @@ footer.footer {
   align-items: center;
 }
 .btnMenu{
-  margin-right: -5em;
-  margin-left: 2em;
+  margin-right: 10em;
+  margin-left: 30em;
 }
 
 .form-inline{
-  margin-right: -2em;
-  margin-left: 10em;
+  margin-top: -70px;
+  margin-right: 6em;
+  margin-left: 20em;
 }
+
+
+.btnMenu1{
+  padding-left: 100px;
+  padding-right: 50px;
+}
+.btnMenu2{
+  /*margin-top: 10%*/
+  margin-left: -20px;
+  margin-right: -90%;
 }
 
 @media (max-width: 768px) {
