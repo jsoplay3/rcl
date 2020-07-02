@@ -20,7 +20,7 @@ juansebastianossadominguez@gmail.com
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Rionegro Compra Local</title>
+  <title></title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -66,7 +66,9 @@ juansebastianossadominguez@gmail.com
             <div class="logo2">
               <a href="https://www.rionegro.gov.co/" target="_blank"><img src="img/LogoAlcaldia-01.svg" height="60px"/></a>
             </div>
-            <div class="container flex-container">
+            <div class="container flex-container" style="
+    padding-right: 0px;
+    padding-left: 0px;">
 
                           <!-- COMIENZA BOTÓN BUSCAR-->
                       <div class="row">
@@ -87,7 +89,7 @@ juansebastianossadominguez@gmail.com
                         ?>
                       </div>
                           <!--TERMINA BOTON BUSCAR-->
-                      <div class="flex-container form-inline">
+                      <div class="flex-container form-inline" style="margin-right: 0px;">
                         <div class="btnMenu1">
                           <a href="https://docs.google.com/forms/d/1fxN0ZdjTab2kzPGjAYmITezZR3rUuwP0HHKuK7Xs64c/edit" target="_blank" class="btn btn-primary" >Registrar Empresa</a>
                         </div>
