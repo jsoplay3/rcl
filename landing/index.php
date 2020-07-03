@@ -66,30 +66,29 @@ juansebastianossadominguez@gmail.com
             <div class="logo2">
               <a href="https://www.rionegro.gov.co/" target="_blank"><img src="img/LogoAlcaldia-01.svg" height="60px"/></a>
             </div>
-            <div class="container flex-container" style="
-    padding-right: 0px;
-    padding-left: 0px;">
-
+            <div class="container flex-container" style="Padding-right: 0px;padding-left: 0px;">
                           <!-- COMIENZA BOTÓN BUSCAR-->
-                      <div class="row">
-                          <form action="index.php" method="post">
-                              <div class="form-row">
-                                  <div class="col-12 col-md-8 mb-2 mb-md-0">
-                                    <input type="text" class="form-control-busqueda" name="nameCom" placeholder="Búsqueda">
-                                  </div>
-                                  <div class="col-16 col-md-3">
-                                    <button type="submit" name="buscarEmp" value="Buscar" class="buscar btn btn-block btn-lg fa fa-search" style="font-size:20px;color:#0069D9;"></button>
-                                  </div>
-                              </div>
-                          </form>
-                        <?php
-                          if(isset($_POST['buscarEmp']) == 'Buscar'){
-                            $filtCom = $empresa->consultarEmpresaLikeLanding($_POST);
-                          }
-                        ?>
+            <div class="row">
+              <form action="index.php" method="post">
+                  <div class="form-row">
+                      <div class="busqueda" style="padding-right: 6px;padding-left: 20px;">
+                        <input type="text" class="form-control-busqueda" name="nameCom" placeholder="Búsqueda" >
                       </div>
+                      <div class="boton" style="margin-top: -37px;padding-left: 0px;margin-left: 315px;padding-right: 9px;">
+                        <button type="submit" class="btn btn-primary" name="buscarEmp" value="Buscar">Buscar</button>
+                      </div>
+                  </div>
+              </form>
+                  <?php
+                    if(isset($_POST['buscarEmp']) == 'Buscar'){
+                      $filtCom = $empresa->consultarEmpresaLikeLanding($_POST);
+                    }
+                  ?>
+            </div>
                           <!--TERMINA BOTON BUSCAR-->
-                      <div class="flex-container form-inline" style="margin-right: 0px;">
+
+                          <!--COMIENZA Registrar E INICIAR SESION-->
+                      <!--<div class="flex-container form-inline" style="margin-right: 0px;">
                         <div class="btnMenu1">
                           <a href="https://docs.google.com/forms/d/1fxN0ZdjTab2kzPGjAYmITezZR3rUuwP0HHKuK7Xs64c/edit" target="_blank" class="btn btn-primary" >Registrar Empresa</a>
                         </div>
@@ -103,7 +102,7 @@ juansebastianossadominguez@gmail.com
                             }
                           ?>
                         </div>
-                      </div>
+                      </div>tERMINA Registrar E INICIAR SESION-->
           </div>
         </div>
       </div>
