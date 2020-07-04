@@ -32,6 +32,7 @@ juansebastianossadominguez@gmail.com
 
   <!-- Custom styles for this template -->
   <link href="css/landing-page.css" rel="stylesheet">
+  <!--<link href="css/normalize/normalize.css"/>-->
   <link rel="stylesheet" href="vendor/fontawesome-free/css/font-awesome.min.css">
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -68,27 +69,27 @@ juansebastianossadominguez@gmail.com
             </div>
             <div class="container flex-container" style="Padding-right: 0px;padding-left: 0px;">
                           <!-- COMIENZA BOTÓN BUSCAR-->
-            <div class="row">
-              <form action="index.php" method="post">
-                  <div class="form-row">
-                      <div class="busqueda" style="padding-right: 6px;padding-left: 20px;">
-                        <input type="text" class="form-control-busqueda" name="nameCom" placeholder="Búsqueda" >
-                      </div>
-                      <div class="boton" style="margin-top: -37px;padding-left: 0px;margin-left: 315px;padding-right: 9px;">
-                        <button type="submit" class="btn btn-primary" name="buscarEmp" value="Buscar">Buscar</button>
-                      </div>
-                  </div>
-              </form>
-                  <?php
-                    if(isset($_POST['buscarEmp']) == 'Buscar'){
-                      $filtCom = $empresa->consultarEmpresaLikeLanding($_POST);
-                    }
-                  ?>
-            </div>
+              <div class="row">
+                <form action="index.php" method="post">
+                    <div class="form-row">
+                        <div class="busqueda" style="padding-right: 6px;padding-left: 20px;">
+                          <input type="text" class="form-control-busqueda" name="nameCom" placeholder="Búsqueda" >
+                        </div>
+                        <div class="boton" style="margin-top: -37px;padding-left: 0px;margin-left: 315px;padding-right: 9px;">
+                          <button type="submit" class="btn btn-primary" name="buscarEmp" value="Buscar">Buscar</button>
+                        </div>
+                    </div>
+                </form>
+                    <?php
+                      if(isset($_POST['buscarEmp']) == 'Buscar'){
+                        $filtCom = $empresa->consultarEmpresaLikeLanding($_POST);
+                      }
+                    ?>
+              </div>
                           <!--TERMINA BOTON BUSCAR-->
 
                           <!--COMIENZA Registrar E INICIAR SESION-->
-                      <!--<div class="flex-container form-inline" style="margin-right: 0px;">
+              <div class="flex-container form-inline">
                         <div class="btnMenu1">
                           <a href="https://docs.google.com/forms/d/1fxN0ZdjTab2kzPGjAYmITezZR3rUuwP0HHKuK7Xs64c/edit" target="_blank" class="btn btn-primary" >Registrar Empresa</a>
                         </div>
@@ -102,7 +103,7 @@ juansebastianossadominguez@gmail.com
                             }
                           ?>
                         </div>
-                      </div>tERMINA Registrar E INICIAR SESION-->
+              </div><!--tERMINA Registrar E INICIAR SESION-->
           </div>
         </div>
       </div>

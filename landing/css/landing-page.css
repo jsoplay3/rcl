@@ -3,10 +3,7 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
  */
-*{
-  margin: 0;
-  padding: 0;
-}
+
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -47,7 +44,10 @@ button.buscar{
   padding-left: 100px;
   padding-right: 50px;
 }
-
+.flex-container .form-inline{
+  margin-top: -60px;
+  margin-right: 0px;
+}
 .btnMenu{
   margin-right: 10em;
   margin-left: 30em;
@@ -109,15 +109,19 @@ button.buscar{
     margin-left: 20em;
   }
 
+  .flex-container .form-inline{
+  margin-top: -70px;
+  margin-left: 307px;
+}
 
   .btnMenu1{
     padding-top: 80px;
-    margin-left: -430px;
+    margin-left: -347px;
     padding-right: 50px;
   }
   .btnMenu2{
     padding-top: 80px;
-    margin-left: -20px;
+    margin-left: 43px;
     /*margin-right: -90%;*/
   }
   .logo1{
