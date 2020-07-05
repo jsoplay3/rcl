@@ -8,7 +8,7 @@ María Fernanda Orozco
 Juan Sebastián Ossa
 juansebastianossadominguez@gmail.com
 3053246739
- -->
+-->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -71,12 +71,12 @@ juansebastianossadominguez@gmail.com
               <div class="row">
                 <form action="index.php" method="post">
                     <div class="form-row">
-                        <div class="busqueda">
+                        <div class="busqueda"><!--Comienza barra de búsqueda-->
                           <input type="text" class="form-control-busqueda" name="nameCom" placeholder="Búsqueda" >
-                        </div>
-                        <div class="boton"><!--COMIENZA BOTÓN DE BÚSQUEDA-->
+                        </div><!--Termina barra de búsqueda-->
+                        <div class="boton"><!--Comienza boton de búsqueda-->
                           <button type="submit" class="btn btn-primary" name="buscarEmp" value="Buscar">Buscar</button>
-                        </div><!--TERMINA BOTÓN DE BÚSQUEDA-->
+                        </div><!--Termina boton de búsqueda-->
                     </div>
                 </form>
                     <?php
