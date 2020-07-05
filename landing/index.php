@@ -63,11 +63,11 @@ juansebastianossadominguez@gmail.com
         <div class="containerLogo">
           <div class="logo1">
               <a href="index.php"><img src="img/logoRcl.svg" height="60px"/></a>
-            </div>
-            <div class="logo2">
+          </div>
+          <div class="logo2">
               <a href="https://www.rionegro.gov.co/" target="_blank"><img src="img/LogoAlcaldia-01.svg" height="60px"/></a>
-            </div>
-            <div><!-- COMIENZA BUSQUEDA-->
+          </div>
+          <div><!-- COMIENZA BUSQUEDA-->
               <div class="row">
                 <form action="index.php" method="post">
                     <div class="form-row">
@@ -85,40 +85,23 @@ juansebastianossadominguez@gmail.com
                       }
                     ?>
               </div>
-            </div><!--TERMINA BUSQUEDA-->
-            <div class="flex-container form-inline"> <!--COMIENZA Registrar E INICIAR SESION-->
-                <div class="btnMenu1">
-                  <a href="https://docs.google.com/forms/d/1fxN0ZdjTab2kzPGjAYmITezZR3rUuwP0HHKuK7Xs64c/edit" target="_blank" class="btn btn-primary">Registrar Empresa
-                  </a>
-                </div>
-                <div class="btnMenu2">
-                          <?php
-                            if (!isset ($_SESSION['uxt_codUsuario'])){
-                              echo '<a href="../views/login.php" class="btn btn-primary" >Iniciar Sesión</a>';
-                            }
-                            else{
-                              echo '<a href="../views/login.php" class="btn btn-primary btnMenu2" >Administrar Empresas</a>';
-                            }
-                          ?>
-                        </div>
-                
-            </div>
-              <!--<div class="flex-container form-inline">
-                        <div class="btnMenu1">
-                          <a href="https://docs.google.com/forms/d/1fxN0ZdjTab2kzPGjAYmITezZR3rUuwP0HHKuK7Xs64c/edit" target="_blank" class="btn btn-primary" >Registrar Empresa</a>
-                        </div>
-                        <div class="btnMenu2">
-                          <?php
-                            if (!isset ($_SESSION['uxt_codUsuario'])){
-                              echo '<a href="../views/login.php" class="btn btn-primary" >Iniciar Sesión</a>';
-                            }
-                            else{
-                              echo '<a href="../views/login.php" class="btn btn-primary btnMenu2" >Administrar Empresas</a>';
-                            }
-                          ?>
-                        </div>
-              </div>tERMINA Registrar E INICIAR SESION-->
-          </div>
+          </div><!--TERMINA BUSQUEDA-->
+          <div class="flex-container form-inline"> <!--COMIENZA Registrar E INICIAR SESION-->
+              <div class="btnMenu1">
+                <a href="https://docs.google.com/forms/d/1fxN0ZdjTab2kzPGjAYmITezZR3rUuwP0HHKuK7Xs64c/edit" target="_blank" class="btn btn-primary">Registrar Empresa
+                </a>
+              </div>
+              <div class="btnMenu2">
+                        <?php
+                          if (!isset ($_SESSION['uxt_codUsuario'])){
+                            echo '<a href="../views/login.php" class="btn btn-primary" >Iniciar Sesión</a>';
+                          }
+                          else{
+                            echo '<a href="../views/login.php" class="btn btn-primary btnMenu2" >Administrar Empresas</a>';
+                          }
+                        ?>
+              </div>
+          </div><!--TERMINA Registrar E INICIAR SESION-->
         </div>
       </div>
     </div>
