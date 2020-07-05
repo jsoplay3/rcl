@@ -32,41 +32,44 @@ input.form-control-busqueda {
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    
 }
 
 .busqueda{
-    padding-right: 20px;
-    padding-left: 80px;
+    padding-right: 6px;
+    padding-left: 20px;
   }
 
-button.buscar{
+/*button.buscar{
   padding-left: 100px;
   padding-right: 50px;
+}*/
+.boton{
+  margin-top: -37px;
+  padding-left: 0px;
+  margin-left: 305px;
+  padding-right: 9px;
 }
-.flex-container .form-inline{
-  margin-top: -60px;
-  margin-right: 0px;
+.flex-container.form-inline{
+  margin-top: -22px;
+  margin-left: 60px;
 }
-.btnMenu{
+/*.btnMenu{
   margin-right: 10em;
   margin-left: 30em;
-}
+}*/
 
-
-.form-inline{
+/*.form-inline{
   margin-top: -70px;
   margin-right: 6em;
   margin-left: 20em;
-}
-
+}*/
 
 .btnMenu1{
   padding-left: 100px;
   padding-right: 50px;
 }
 .btnMenu2{
-  /*margin-top: 10%*/
+  /*margin-top: 10%;*/
   margin-left: -20px;
   margin-right: -90%;
 }
@@ -88,40 +91,45 @@ button.buscar{
       transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   }
 
-  button.buscar{
+  /*button.buscar{
     margin-top: -50px;
     padding-left: 121px;
     padding-right: 0px;
-  }
+  }*/
   .busqueda{
     padding-right: 6px;
     padding-left: 20px;
   }
-.btn-primary {
+  .boton{
+    margin-left: 0px;
+    margin-left: 260px;
+  }
+  /*.btn-primary {
     margin-top: 0;
     padding-left: 0px;
     margin-left: -60px;
     padding-right: 9px;
-  }
-  .form-inline{
+  }*/
+  /*.form-inline{
     margin-top: -70px;
     margin-right: 6em;
     margin-left: 20em;
-  }
+  }*/
 
   .flex-container .form-inline{
-  margin-top: -70px;
+  padding-top: -80px;
   margin-left: 307px;
 }
 
   .btnMenu1{
-    padding-top: 80px;
-    margin-left: -347px;
+    margin-top:30px;
+    margin-left: -160px;
     padding-right: 50px;
   }
   .btnMenu2{
-    padding-top: 80px;
-    margin-left: 43px;
+    margin-top: -38px;
+    margin-right:0;
+    margin-left: 126px;
     /*margin-right: -90%;*/
   }
   .logo1{
