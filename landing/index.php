@@ -14,6 +14,14 @@ juansebastianossadominguez@gmail.com
 <html lang="es">
 
 <head>
+  <!-- Select 2 -->
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
   <link  rel="icon"   href="images/IcoRcl.png" type="img/IcoRcl.png" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,9 +42,22 @@ juansebastianossadominguez@gmail.com
   <link href="css/landing-page.css" rel="stylesheet">
   <link rel="stylesheet" href="vendor/fontawesome-free/css/font-awesome.min.css">
   
+  
 
 </head>
-
+<script>
+  // In your Javascript (external .js resource or <script> tag)
+  $(document).ready(function() {
+      $('.searchSelect2').select2(
+        {
+          placeholder: "Buscar una empresa o negocio",
+          allowClear: true,
+          // minimumInputLength: 3,
+          // maximumInputLength: 20
+        }
+      );
+  });
+</script>
 
 <body>
   <?php
@@ -75,46 +96,33 @@ juansebastianossadominguez@gmail.com
       
     </div>
   </nav>
+  
 
   <!-- Masthead -->
   <header class="masthead text-white text-center">
     <div class="overlay"></div>
     <div class="container">
+    
       <div class="row">
         
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"> 
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="img/bg_personas.jpg" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="img/bg_personas.jpg" alt="Second slide">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-        
-      </div>
-    </div>
-    
-  </header>
-  
-  <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+      <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
           <form action="index.php" method="post">
             <div class="form-row">
+
+
+
               <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="text" class="form-control form-control-lg" name="nameCom" placeholder="Ingresa un nombre">
+                <div class="form-group">
+                  <select class="form-control form-control-lg searchSelect2" name="nameCom">
+                  <option></option>
+                  <?php
+                    $emp = $empresa->consultarEmpresa();
+                    foreach ($emp as $key) {
+                      echo "<option>".$key['NAME_COMPANY']."</option>";
+                    }
+                  ?>
+                  </select>
+                </div>
               </div>
               <div class="col-12 col-md-3">
                 <button type="submit" name="buscarEmp" value="Buscar" class="btn btn-block btn-lg btn-primary">Buscar...</button>
@@ -131,6 +139,50 @@ juansebastianossadominguez@gmail.com
                 $filtCom = $empresa->consultarEmpresaLikeLanding($nombre);
               }
           ?>
+  </div>
+        
+      </div>
+    </div>
+    
+  </header>
+  
+  <section class="features-icons bg-light text-center">
+  <div class="row">
+    <div class="container">
+    <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#menu1">Alimentos</a></li>
+    <li><a data-toggle="tab" href="#menu2">Ciudado Personal</a></li>
+    <li><a data-toggle="tab" href="#menu3">Productos Hogar</a></li>
+    <li><a data-toggle="tab" href="#menu3">Tecnología</a></li>
+    <li><a data-toggle="tab" href="#menu3">Artesanales</a></li>
+    <li><a data-toggle="tab" href="#menu3">Entretenimiento</a></li>
+    <li><a data-toggle="tab" href="#menu3">Cultira</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>HOME</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </div>
+  </div>
+</div>
+    </div>
+            </div>
+  </section>
   <!-- Icons Grid -->
   <section class="features-icons bg-light text-center">
     <div class="container">
@@ -390,7 +442,7 @@ juansebastianossadominguez@gmail.com
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
+  <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
