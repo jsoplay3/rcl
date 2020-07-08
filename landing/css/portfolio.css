@@ -1,0 +1,65 @@
+:root{
+  --border: 10px;
+}
+
+
+.portfolio{
+  background-color: white;
+}
+
+.project{
+  border:;
+  box-shadow: 10px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+  padding: 0 30px 0 130px;
+  margin: 10px;
+  margin-right: 200px;
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.project2{
+  border: 0;
+  /*box-shadow: 0 0 0 10px rgba(0,0,0,0.1);*/
+  margin-bottom: 15px;
+  padding: 20px;
+  margin: 10px;
+  margin-left: 200px;
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.details{
+  width: 500px;
+  text-align: left;
+  background-color: white;
+  margin-top: 40px;
+
+  /*display: inline-block;*/
+}
+
+.imageContainer{
+  width: 500px;
+  /*display: inline-block;*/
+}
+.image1{
+  width:400px;
+  border-radius: var(--border);
+  padding-left: 0;
+  margin-left:130px;
+  /*margin-left:250px;*/
+}
+
+.image2{
+  margin-top: 20px;
+  margin-bottom:20px;
+  width:400px;
+  border-radius: var(--border);
+  margin-left: 25px;
+}
+
+.details.portfolio2{
+  margin-left:60px;
+}
