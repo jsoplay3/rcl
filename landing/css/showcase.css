@@ -27,7 +27,7 @@
 @media(min-width: 768px){
   .showcase-article{
     height: 417px;
-    border: 1px solid red;
+    border: 0;
     padding-bottom: 0;
     margin: 0px 20px;
     padding: 20px;
@@ -35,7 +35,7 @@
   }
   .showcase-article2{
     height: 417px;
-    border: 1px solid red;
+    border: 0;
     padding-bottom: 0;
     margin: 20px 20px;
     padding: 20px;
@@ -44,7 +44,7 @@
   }
   .showcase-article3{
     height: 323px;
-    border: 1px solid red;
+    border: 0;
     padding-bottom: 0;
     margin: 0px 20px;
     padding: 20px;
