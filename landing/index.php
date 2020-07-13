@@ -33,6 +33,7 @@ juansebastianossadominguez@gmail.com
   <!-- Custom styles for this template -->
   <link href="css/landing-page.css" rel="stylesheet">
   <link href="css/reset/reset.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/showcase.css">
   <link rel="stylesheet" href="vendor/fontawesome-free/css/font-awesome.min.css">
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -326,30 +327,36 @@ juansebastianossadominguez@gmail.com
 
   <!-- Image Showcases -->
   <section class="showcase">
-    <div class="container-fluid p-0">
-      <div class="row no-gutters">
+      <article class="showcase-article">
+        <figure class="showcase-imageContainer">
+          <img class="showcase-image" src="img/banner_comercio.jpg" alt="">
+        </figure>
+          <div class="showcase-text">
+            <h2>Rionegro Compra Local</h2>
+            <p class="showcase-paragraph">Rionegro es un municipio de Colombia, ubicado en el departamento de Antioquia. Se encuentra en el valle de San Nicolás o también llamado Altiplano del Oriente, en la subregión Oriente, siendo la población más grande, así como la que concentra el movimiento económico de la subregión. Su nombre oficial es Ciudad Santiago de Arma de Rionegro. Limita al norte con los municipios de Guarne y San Vicente, por el este con los municipios de Marinilla y El Carmen de Viboral, por el sur con el municipio de La Ceja, y por el oeste con los municipios de El Retiro, Envigado y Medellín</p>
+          </div>
+      </article>
+      <article class="showcase-article2">
+        <figure class="showcase-imageContainer">
+          <img class="showcase-image2" src="img/banner_igleasia.jpeg" alt="">
+        </figure>
+          <div class="showcase-text2">
+            <h2>Registra tu Negocio</h2>
+            <p class="showcase-paragraph">Endendemos que estar contigo es brindarte herramientas para tu negocio, por eso hemos creado esta plataforma para que promociones tus productos y servicios para que la gente te conozca y puedas aumentar tus ventas</p>
+          </div>
+        </div>
+      </article>
+      <article  class="showcase-article3"> 
+            <figure class="showcase-imageContainer">
+              <img class="showcase-image" src="img/banner_rionegro1.jpg" alt="">
+            </figure>
 
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/banner_comercio.jpg');"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Rionegro Compra Local</h2>
-          <p class="lead mb-0">Rionegro es un municipio de Colombia, ubicado en el departamento de Antioquia. Se encuentra en el valle de San Nicolás o también llamado Altiplano del Oriente, en la subregión Oriente, siendo la población más grande, así como la que concentra el movimiento económico de la subregión. Su nombre oficial es Ciudad Santiago de Arma de Rionegro. Limita al norte con los municipios de Guarne y San Vicente, por el este con los municipios de Marinilla y El Carmen de Viboral, por el sur con el municipio de La Ceja, y por el oeste con los municipios de El Retiro, Envigado y Medellín</p>
-        </div>
+          <div class="showcase-text">
+            <h2>Proyecto de la Secretaría de Desarrollo Económico</h2>
+            <p class="showcase-paragraph">Rionegro compra local es una iniciativa de la Secretaría de Desarrollo Económico, a través de la subsecretaria de Ciencia Tecnología e Innovación para el apalancamiento de negocios Rionegreros en la red.</p>
+          </div>
+      </article>
       </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/banner_igleasia.jpeg');"></div>
-        <div class="col-lg-6 my-auto showcase-text">
-          <h2>Registra tu Negocio</h2>
-          <p class="lead mb-0">Endendemos que estar contigo es brindarte herramientas para tu negocio, por eso hemos creado esta plataforma para que promociones tus productos y servicios para que la gente te conozca y puedas aumentar tus ventas</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/banner_rionegro1.jpg');"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Proyecto de la Secretaría de Desarrollo Económico</h2>
-          <p class="lead mb-0">Rionegro compra local es una iniciativa de la Secretaría de Desarrollo Económico, a través de la subsecretaria de Ciencia Tecnología e Innovación para el apalancamiento de negocios Rionegreros en la red.</p>
-        </div>
-      </div>
-    </div>
   </section>
 
 
