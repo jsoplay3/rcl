@@ -51,16 +51,7 @@ input.form-control-busqueda {
   margin-top: -22px;
   margin-left: 60px;
 }
-/*.btnMenu{
-  margin-right: 10em;
-  margin-left: 30em;
-}*/
 
-/*.form-inline{
-  margin-top: -70px;
-  margin-right: 6em;
-  margin-left: 20em;
-}*/
 /*Boton de Registrar Empresa*/
 .btnMenu1 {
   padding-left: 100px;
@@ -89,12 +80,6 @@ input.form-control-busqueda {
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
-
-  /*button.buscar{
-    margin-top: -50px;
-    padding-left: 121px;
-    padding-right: 0px;
-  }*/
   .busqueda {
     padding-right: 6px;
     padding-left: 20px;
@@ -103,18 +88,6 @@ input.form-control-busqueda {
     margin-left: 0px;
     margin-left: 260px;
   }
-  /*.btn-primary {
-    margin-top: 0;
-    padding-left: 0px;
-    margin-left: -60px;
-    padding-right: 9px;
-  }*/
-  /*.form-inline{
-    margin-top: -70px;
-    margin-right: 6em;
-    margin-left: 20em;
-  }*/
-
   /*Registrar e Iniciar Sesion*/
 
   .flex-container .form-inline {
@@ -176,7 +149,6 @@ input.form-control-busqueda {
 header.masthead {
   position: relative;
   background-color: #fff;
-  /*background: url("../img/bg_personas.jpg") center center;*/
   background-size: cover;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -192,24 +164,6 @@ header.masthead {
     width: 100%;
     height: auto;
   }
-
-  /*.flex-container div {
-    margin-left: 35px;
-    margin-right: 35px;
-  }
-
-  .flex-container input{
-    margin-top: 10px;
-    margin-bottom: -12%;
-    margin-left: -5%;
-  }
-
-    .flex-container button{
-      margin-top: 2px;
-      margin-bottom: 0;
-      margin-left: 50%;
-      margin-right: 0;
-  }*/
 }
 
 header.masthead .overlay {
@@ -387,26 +341,3 @@ header.masthead h1 {
     justify-content: center;
   }
 }
-
-/*Comienza Min Width para el Responsive de NavBar
-@media(max-width: 900px){
-  .flex-container div {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .flex-container input{
-    margin-top: 10px;
-    margin-bottom: -12%;
-    margin-left: 2%;
-    margin-right: -10px;
-  }
-
-    .flex-container button{
-      margin-top: -4px;
-      margin-bottom: 0;
-      margin-left: 215%;
-      margin-right: 0;
-  }
-}
-Termina Min Width para el Responsive de NavBar*/

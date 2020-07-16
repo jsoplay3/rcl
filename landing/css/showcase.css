@@ -1,75 +1,84 @@
-
-
 /*Tamaño minimo*/
-@media(max-width: 768px){
-  .showcase{
-  border: 0;
-  margin: 1px;
-  padding: 1px;
+@media (max-width: 768px) {
+  .showcase {
+    margin: 1px;
+    padding: 1px;
   }
 
-  .showcase-image{
+  /*.showcase-image {
+    width: 100%;
+  }*/
+  /*.showcase-image2 {
     width: 100%;
   }
-  .showcase-image2{
-    width: 100%;
-  }
-  /*.showcase-text{
+  .showcase-text{
     margin-top: 0;
     padding: 20px;
   }*/
-  .showcase-text2{
+  /*.showcase-text2 {
     margin-top: 0;
     padding: 45px;
+  }*/
+  /*.showcase-image {
+    width: 100%;
+    height: auto;
+  }*/
+  .showcase .showcase-img {
+    min-height: 16rem;
+    background-size: cover;
+  }
+  .showcase .showcase-text {
+    padding: 3rem;
+    margin: 0 12px;
   }
 }
 
-@media(min-width: 768px){
-  .showcase-article{
+@media (min-width: 768px) {
+  .showcase {
+    margin: 30px;
+    padding: 30px;
+  }
+  /*.showcase-article {
     height: 417px;
     border: 0;
     padding-bottom: 0;
     margin: 0px 20px;
     padding: 20px;
     display: flex;
-  }
-  .showcase-article2{
+  }*/
+}
+/*.showcase-article2 {
     height: 417px;
     border: 0;
     padding-bottom: 0;
     margin: 20px 20px;
     padding: 20px;
     display: flex;
-
   }
-  .showcase-article3{
+  .showcase-article3 {
     height: 323px;
     border: 0;
     padding-bottom: 0;
     margin: 0px 20px;
     padding: 20px;
     display: flex;
-  }
+  }*/
 
-  .showcase-image{
+/*.showcase-image {
     width: 500px;
-
-  }
-  .showcase .showcase-text {
+  }*/
+/*.showcase .showcase-text {
     padding: 65px;
     height: 375px;
   }
-  .showcase-image2{
+}*/
+/*.showcase-image2 {
     width: 500px;
     margin-left: 764px;
   }
-  .showcase-text2{
+  .showcase-text2 {
     margin-top: 60px;
     margin-right: 592px;
     margin-left: -1200px;
   }
-}
-
-
-
-
+}*/
