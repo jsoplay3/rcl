@@ -39,7 +39,11 @@ juansebastianossadominguez@gmail.com
   <!-- Custom styles for this template -->
   <link href="css/landing-pagePdp.css" rel="stylesheet">
   <link rel="stylesheet" href="vendor/fontawesome-free/css/font-awesome.min.css">
-
+  <!--Para los mapas-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/><!--Para los mapas-->
+  <!--<link rel="stylesheet" href="mapas/map.css" />-->
 </head>
 
 
@@ -177,20 +181,13 @@ juansebastianossadominguez@gmail.com
           </div>
       
       </div>
-
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2 class="blue">Ubicanos</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31734.753234521744!2d-75.37188653790739!3d6.151620907298328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e469f0f10c26bc9%3A0x76297df352b016c6!2sRionegro%2C%20Antioquia%2C%20Colombia!5e0!3m2!1ses!2sus!4v1591167985491!5m2!1ses!2sus" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>  
-          </div>
-
-          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            
-            <h2></h2>
-              <iframe style="border: none; overflow: hidden;" <?php echo $string ?>  width="100%" height="500" frameborder="0" scrolling="no"></iframe>
-          </div>
+      <div id="myMap">
       
       </div>
+      <!--<div id="mapid" class="mapid">
+            
+      </div>-->
+      
       
     </div>
   </section>
@@ -251,7 +248,11 @@ juansebastianossadominguez@gmail.com
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  <!--Mapas-->
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+   <script src="mapas/map.js"></script><!--Mapas-->
 </body>
 
 </html>

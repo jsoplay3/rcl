@@ -337,7 +337,7 @@ juansebastianossadominguez@gmail.com
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/banner_igleasia.jpeg');"></div>
-        <div class="col-lg-6 my-auto showcase-text">
+        <div class="col-lg-6 my-auto showcase-text2">
           <h2>Registra tu Negocio</h2>
           <p class="lead mb-0">Endendemos que estar contigo es brindarte herramientas para tu negocio, por eso hemos creado esta plataforma para que promociones tus productos y servicios para que la gente te conozca y puedas aumentar tus ventas</p>
         </div>
