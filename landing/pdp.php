@@ -39,12 +39,20 @@ juansebastianossadominguez@gmail.com
   <!-- Custom styles for this template -->
   <link href="css/landing-pagePdp.css" rel="stylesheet">
   <link rel="stylesheet" href="vendor/fontawesome-free/css/font-awesome.min.css">
+<<<<<<< HEAD
   <!--Comienza Mapas-->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/>
    <link rel="stylesheet" href="mapas/map.css">
    <!---Finzaliza Mapas-->
+=======
+  <!--Para los mapas-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/><!--Para los mapas-->
+  <!--<link rel="stylesheet" href="mapas/map.css" />-->
+>>>>>>> cfd7a8981931e6319c7317b7da57f667d1530574
 </head>
 
 
@@ -254,6 +262,7 @@ juansebastianossadominguez@gmail.com
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<<<<<<< HEAD
   <!--Comienza Mapas-->
    <!-- Make sure you put this AFTER Leaflet's CSS -->
  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
@@ -261,6 +270,13 @@ juansebastianossadominguez@gmail.com
    crossorigin=""></script>
   <script src="mapas/map.js"></script>
   <!--Termina Mapas-->
+=======
+  <!--Mapas-->
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+   <script src="mapas/map.js"></script><!--Mapas-->
+>>>>>>> cfd7a8981931e6319c7317b7da57f667d1530574
 </body>
 
 </html>
